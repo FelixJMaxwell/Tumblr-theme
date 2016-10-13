@@ -5,36 +5,32 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <!-- BOOTSTRAP JS 3.3.7 -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <!-- JQUERY -->
-        <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
     <style>
         #bg{
             background: url({HeaderImage}) no-repeat;
             background-size: cover;
             width: 100%;
             height: 350px;
+            margin: 0;
+            border: 1px solid black;
         }
         
         #useravatar{
             margin-top: -75px;
+            border: 1px solid black;
+            border-radius: 10px;
         }
         
         #useravatarnoheaderimage{
             margin-top: 50px;
         }
         
-        .span8 img{
-            border-radius: 10%;
-            border: 1px solid black;
-        }
-        
-        .span8 h1,h4{
+        #titleanddescripion{
             text-align: center;
         }
         
-        .span8 .h1{
+        #titleanddescripion h1{
             border-bottom: 1px solid black;
             width: 70%;
             padding-bottom: 10px;
@@ -50,11 +46,6 @@
             text-align: center;
         }
         
-        .navbar-nav li a{
-            padding: 0;
-            margin: 10px;
-        }
-        
         .navbar{
             margin-top: -15px;
         }
@@ -67,19 +58,17 @@
         
         .navbar .navbar-nav li a{
             color: black;
+            padding: 0;
+            margin: 10px;
         }
         
         .navbar .navbar-nav li a:hover{
             background-color: inherit;
         }
-        
-        .row ul{
-            list-style: none;
-        }
-        
         .col-md-4{
             margin-bottom: 15px;
         }
+        
         
     </style>
     
@@ -90,41 +79,39 @@
     </head>
     <body>
         <header>
-            <div class="row-fluid">
-                <div class="span8">
-                    {block:ifShowHeaderImage}<div id="bg" class="img-responsive"></div>{/block:ifShowHeaderImage}
-                    <div class="row-fluid">
-                        {block:ifShowAvatar}
-                            <div class="span8">
-                                <img id="useravatar{block:ifNotShowHeaderImage}noheaderimage{/block:ifNotShowHeaderImage}" alt="useravatar" src="{PortraitURL-128}" class="center-block">
-                            </div>
-                        {/block:ifShowAvatar}
-                        <div class="span8">
-                            <h1 class="h1 center-block">{Title}</h1>
-                            <h4 class="h4">{Description}</h4>
-                        </div>
-                        <div class="navbar">
-                            <div class="container-fluid">
-                                <ul class="nav navbar-nav">
-                                    <li><a href="{BlogURL}">Home</a></i>
-                                    <li><a href="/archive">Archive</a></li>
-                                </ul>
-                            </div>
-                        </div>
+        {block:ifShowHeaderImage}<div id="bg"></div>{/block:ifShowHeaderImage}
+            <div class="container-fluid">
+            {block:ifShowAvatar}
+                <div class="col-md-12">
+                    <img id="useravatar{block:ifNotShowHeaderImage}noheaderimage{/block:ifNotShowHeaderImage}" alt="useravatar" src="{PortraitURL-128}" class="center-block">
+                </div>
+            {/block:ifShowAvatar}
+                <div id="titleanddescripion" class="col-md-12">
+                    <h1 class="h1 center-block">{Title}</h1>
+                    <h4 class="h4">{Description}</h4>
+                </div>
+                <div class="navbar">
+                    <div class="container-fluid">
+                        <ul class="nav navbar-nav">
+                            <li><a href="{BlogURL}">Home</a></i>
+                            <li><a href="/archive">Archive</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </header>
-        <div class="container-fluid" id="wrappercontent">
-            <div class="row-fluid" id="imgcontainer">
-                {block:Posts}
-                    {block:Photo}
-                        <a rel="post-{PostID}" href="{PhotoURL-HighRes}">
-                            <img id="photopostimg" class="col-md-4 img-responsive" alt="{PhotoAlt}" src="{PhotoURL-500}" width="{PhotoWidth-500}" height="{PhotoHeight-500}">
-                        </a>
-                    {/block:Photo}
-                {/block:Posts}
+            <div id="row">
+                <div class="container-fluid">
+                    {block:Posts}
+                        {block:Photo}
+                            <div class="col-md-4">
+                                <a rel="post-{PostID}" href="{PhotoURL-HighRes}">
+                                    <img class="img-responsive" alt="{PhotoAlt}" src="{PhotoURL-500}" width="{PhotoWidth-500}" height="{PhotoHeight-500}">
+                                </a>
+                            </div>
+                        {/block:Photo}
+                    {/block:Posts}
+                </div>
             </div>
-        </div>
     </body>
 </html>
