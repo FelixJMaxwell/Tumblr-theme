@@ -1,77 +1,187 @@
 <!DOCTYPE>
 <html>
     <head>
-        <!-- BOOTSTRAP 3.3.7 -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <!-- BOOTSTRAP JS 3.3.7 -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- OTHERS - OTHERS - OTHERS - OTHERS - OTHERS - OTHERS - OTHERS - OTHERS -->
+    <link rel="shortcut icon" href="{Favicon}">
+<!-- OTHERS - OTHERS - OTHERS - OTHERS - OTHERS - OTHERS - OTHERS - OTHERS -->
+    <meta name="viewport" content="width=device-width, initial-scale=0">
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <!-- BOOTSTRAP 3.3.7 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- masonry -->
+    <script text="Javascript" src="https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script>
+    <!-- isotope -->
+    <script text="Javascript" src="https://unpkg.com/isotope-layout@3.0/dist/isotope.pkgd.min.js"></script>
+        <!-- images loaded-->
+    <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
     <style>
-        #bg{
-            background: url({HeaderImage}) no-repeat;
-            background-size: cover;
-            width: 100%;
-            height: 350px;
-            margin: 0;
-        }
-        
-        #useravatar{
-            margin-top: -75px;
-            border: 1px solid black;
-            border-radius: 10px;
-        }
-        
-        #useravatarnoheaderimage{
-            margin-top: 50px;
-        }
-        
-        #titleanddescripion{
-            text-align: center;
-        }
-        
-        #titleanddescripion h1{
-            border-bottom: 1px solid black;
-            width: 70%;
-            padding-bottom: 10px;
-        }
-        
-        .center-block {
-            display: block;
-            margin-left: auto;
-            margin-right: auto
-        }
-        
-        .container-fluid{
-            text-align: center;
-        }
-        
-        .navbar{
-            margin-top: -15px;
-        }
-        
-        .navbar .navbar-nav{
-            display: inline-block;
-            float: none;
-            vertical-align: top;
-        }
-        
-        .navbar .navbar-nav li a{
-            color: black;
-            padding: 0;
-            margin: 10px;
-        }
-        
-        .navbar .navbar-nav li a:hover{
-            background-color: inherit;
-        }
-    </style>
+/* OTHERS - OTHERS - OTHERS - OTHERS - OTHERS - OTHERS - OTHERS -  */
+    #bg{
+        background: url({HeaderImage}) no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 350px;
+        margin: 0;
+    }
     
+    .center-block {
+        display: block;
+        margin-left: auto;
+        margin-right: auto
+    }
+    
+    body{
+        background: {color:Background color};
+    }
+/* OTHERS - OTHERS - OTHERS - OTHERS - OTHERS - OTHERS - OTHERS -  */
+
+/* START USER AVATAR SECTION, TITLE AND DESCRIPTION */
+    #useravatar{
+        margin-top: -75px;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+        
+    #useravatarnoheaderimage{
+        margin-top: 50px;
+        border-radius: 10px;
+    }
+        
+    #titleanddescripion{
+        text-align: center;
+    }
+        
+    #titleanddescripion h1{
+        border-bottom: 1px solid black;
+        width: 70%;
+        padding-bottom: 10px;
+    }
+/* END USER AVATAR SECTION, TITLE AND DESCRIPTION */
+     
+/* START NAVIGATION BAR - START NAVIGATION BAR - START NAVIGATION BAR */
+    .navbar-nav{
+        text-align: center;
+        height: 40px;
+    }
+    
+    .navbar-nav p{
+        display: inline-block;
+        margin: 10px;
+        color: black;
+    }
+    
+    .affix{
+      top: -5px;
+      z-index: 100;
+      background-color: {color:Background color};
+    }
+
+/* END NAVIGATION BAR - END NAVIGATION BAR - END NAVIGATION BAR */
+
+/* START CSS CONTENT - START CSS CONTENT - START CSS CONTENT */
+    .grid{
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .grid:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+       
+    .twocolumns{
+        width: 50%;
+    }
+    
+    .threecolumns{
+        width: 33.3333%;
+    }
+    
+    .fourcolumns{
+        width: 25%;
+    }
+        
+    .grid-item {
+        float: left;
+        margin-bottom: 10px;
+    }
+
+    .grid-item img {
+        display: block;
+        width: 100%;
+    }
+    
+    .inside-item{
+        width: 95%;
+        margin: 0 auto;
+    }
+    
+    .firstimg a img{
+        display: none;
+    }
+    
+    .firstimg a:first-child img{
+        display: block;
+    }
+/* END CSS CONTENT - END CSS CONTENT - END CSS CONTENT - END CSS CONTENT */
+
+/* START FOOTER - START FOOTER - START FOOTER - START FOOTER - */
+    .footercontainer ul{
+        list-style: none;
+    }
+    
+    .footercontainer ul li:nth-child(1){
+        text-align: right;
+    }
+    
+    .numpages{
+        text-align: center;
+    }
+/* END FOOTER - END FOOTER - END FOOTER - END FOOTER - END FOOTER - */
+
+/* START PERMA LINK PAGES - START PERMA LINK PAGES - START PERMA LINK PAGES */
+    .fullwidth{
+        width: 100%;
+        height: 100% !important;
+    }
+    
+    ol.notes {
+        padding: 0px;
+        margin: 25px 0px;
+        list-style-type: none;
+    }
+
+    ol.notes li.note img.avatar {
+        vertical-align: -4px;
+        margin-right: 10px;
+        width: 64px;
+        height: 64px;
+    }
+    
+    ol li{
+        display: inline-table;
+    }
+    
+    ol li span.action{
+        display: none;
+    }
+/* END PERMA LINK PAGES - END PERMA LINK PAGES - END PERMA LINK PAGES */
+    </style>
     <title>{Title}</title>
+<!-- START META TAGS - START META TAGS - START META TAGS - START META TAGS -->
     <meta name="if:Show Header Image" content="1">
     <meta name="if:Show Avatar" content="0">
-    
+    <meta name="if:Two Columns" content="0">
+    <meta name="if:Three columns" content="0">
+    <meta name="if:Four Columns" content="0">
+    <meta name="color:Background color" color content="#FFFFFF">
+<!-- END META TAGS - END META TAGS - END META TAGS - END META TAGS -->
     </head>
-    <body>
+    <body class="{block:IndexPage}index-page{/block:IndexPage}">
+<!-- START HEADER - START HEADER - START HEADER - START HEADER -->
         <header>
         {block:ifShowHeaderImage}<div id="bg"></div>{/block:ifShowHeaderImage}
             <div class="container-fluid">
@@ -84,26 +194,102 @@
                     <h1 class="h1 center-block">{Title}</h1>
                     <h4 class="h4">{Description}</h4>
                 </div>
-                <div class="navbar">
-                    <div class="container-fluid">
-                        <ul class="nav navbar-nav">
-                            <li><a href="{BlogURL}">Home</a></i>
-                            <li><a href="/archive">Archive</a></li>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </header>
-            <div class="container" id="testing1" style=" height: 100%"</div>
-                <div id="testing2" class="row">
+<!-- END HEADER - END HEADER - END HEADER - END HEADER - END HEADER -->
+<!-- NAVIGATION BAR - NAVIGATION BAR - NAVIGATION BAR - NAVIGATION BAR -->
+        <nav class="navbar navigationbar">
+                <ul class="nav navbar-nav col-md-12 col-xs-12" data-spy="affix" data-offset-top="518">
+                    <a href="{BlogURL}"><p>Home</p></a>
+                    <a href="/archive"><p>Archive</p></a>
+                </ul>
+        </nav>
+<!-- END NAVIGATION BAR - END NAVIGATION BAR -->
+<!-- START MAIN CONTENT CONTAINER - START MAIN CONTENT CONTAINER -->
+            <div class="container-fluid contentcontainer {block:PermalinkPage}col-md-12{/block:PermalinkPage}">
+                <div class="grid {block:PermalinkPage}col-md-12 fullwidth{/block:PermalinkPage}">
+                    <div class="grid-sizer {block:IndexPage}{block:ifTwoColumns}twocolumns{/block:ifTwoColumns} {block:ifThreeColumns}threecolumns{/block:ifThreeColumns} {block:ifFourColumns}fourcolumns{/block:ifFourColumns}{/block:IndexPage}"></div>
+<!-- START BLOCK POSTS - START BLOCK POSTS - START BLOCK POSTS  -->
                     {block:Posts}
-                        {block:Photo}
-                                <a rel="post-{PostID}" href="{PhotoURL-HighRes}">
-                                    <img class="col-md-6 img-responsive" alt="{PhotoAlt}" src="{PhotoURL-500}">
-                                </a>
-                        {/block:Photo}
+
+                    {block:Photo}
+                        <div class="grid-item {block:IndexPage}{block:ifTwoColumns}twocolumns{/block:ifTwoColumns} {block:ifThreeColumns}threecolumns{/block:ifThreeColumns} {block:ifFourColumns}fourcolumns{/block:ifFourColumns}{/block:IndexPage} {block:PermalinkPage}col-md-12{/block:PermalinkPage}">
+                            <div class="inside-item">
+                                {block:HighRes} 
+                                    {block:IndexPage}<a href="{Permalink}">{/block:IndexPage} <img src="{PhotoURL-HighRes}">{block:IndexPage}</a>{/block:IndexPage}
+                                {/block:HighRes} 
+                            </div>
+                        </div>
+                    {/block:Photo}
+
+                    {block:Photoset}
+                        <div class="grid-item {block:IndexPage}firstimg {block:ifTwoColumns}twocolumns{/block:ifTwoColumns} {block:ifThreeColumns}threecolumns{/block:ifThreeColumns} {block:ifFourColumns}fourcolumns{/block:ifFourColumns}{/block:IndexPage} {block:PermalinkPage}col-md-12{/block:PermalinkPage}">
+                            <div class="inside-item">
+
+                                {block:IndexPage}
+                                    {block:Photos}
+                                        {block:IndexPage}<a href="{Permalink}">{/block:IndexPage}<img src="{PhotoURL-500}"/>{block:IndexPage}</a>{/block:IndexPage}
+                                    {/block:Photos}
+                                {/block:IndexPage}
+
+                                {block:PermalinkPage}
+                                    <div class="permalinkpagesets">
+                                        <div class="Permaset-item col-md-6">
+                                            {Photoset-500}
+                                        </div>
+                                        <div class="notes col-md-6">
+                                            {block:PostNotes}
+                                                {PostNotes-64}
+                                            {/block:PostNotes}
+                                        </div>
+                                    </div>                                    
+                                {/block:PermalinkPage}
+
+                            </div>
+                        </div>
+                    {/block:Photoset}
+
                     {/block:Posts}
+<!-- END BLOCK POSTS - END BLOCK POSTS - END BLOCK POSTS - END BLOCK POSTS -->
                 </div>
             </div>
+<!-- END MAIN CONTENT CONTAINER - END MAIN CONTENT CONTAINER -->
+<!-- START FOOTER - START FOOTER - START FOOTER - START FOOTER  -->
+            <footer>
+                <div class="footercontainer col-md-12">
+                    {block:IndexPage}
+                        {block:Pagination}
+                            <ul>
+                                <li class="col-md-5"></i>
+                                <li class="col-md-2 numpages">
+                                    {block:JumpPagination lenght="5"}
+                                        {block:CurrentPage}
+                                            <span>{PageNumber}</span>
+                                        {/block:CurrentPage}
+                                        {block:JumpPage}
+                                            <a href="{URL}">{PageNumber}</a>
+                                        {/block:JumpPage}
+                                    {/block:JumpPagination}
+                                </li>
+                                <li class="col-md-5"></li>
+                            </ul>
+                        {/block:Pagination}
+                    {/block:IndexPage}
+                </div>
+            </footer>
+<!-- END FOOTER --><!-- END FOOTER --><!-- END FOOTER --><!-- END FOOTER -->
+<!-- WRITE MORE HTML STUFF BEFORE THIS PART -->
+<!-- SCRIPTS AT THE END OF THE BODY -->
+            <script>
+                $(document).ready(function() {
+                    var $grid = $('.grid').masonry({
+                    itemSelector: '.grid-item',
+                });
+                
+                $('.grid').imagesLoaded().progress(function() {
+                    $grid.masonry();
+                    });
+                });
+            </script>
     </body>
 </html>
