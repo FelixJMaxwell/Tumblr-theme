@@ -26,14 +26,14 @@
         margin: 0;
     }
     
+    body{
+        background: url('{select:Pattern style}') repeat {color:Background color};
+    }
+    
     .center-block {
         display: block;
         margin-left: auto;
         margin-right: auto
-    }
-    
-    body{
-        background: {color:Background color};
     }
 /* OTHERS - OTHERS - OTHERS - OTHERS - OTHERS - OTHERS - OTHERS -  */
 
@@ -73,16 +73,16 @@
     }
     
     .affix{
-      top: -5px;
+      top: -10px;
       z-index: 100;
-      background-color: {color:Background color};
+      background: url('{select:Pattern style}') repeat {color:Background color};
     }
 
 /* END NAVIGATION BAR - END NAVIGATION BAR - END NAVIGATION BAR */
 
 /* START CSS CONTENT - START CSS CONTENT - START CSS CONTENT */
     .grid{
-        width: 90%;
+        /*width: 90%;*/
         margin: 0 auto;
     }
     
@@ -91,7 +91,11 @@
         display: block;
         clear: both;
     }
-       
+
+    .onecolumn{
+        width: 100%;
+    }
+    
     .twocolumns{
         width: 50%;
     }
@@ -174,10 +178,50 @@
 <!-- START META TAGS - START META TAGS - START META TAGS - START META TAGS -->
     <meta name="if:Show Header Image" content="1">
     <meta name="if:Show Avatar" content="0">
-    <meta name="if:Two Columns" content="0">
-    <meta name="if:Three columns" content="0">
-    <meta name="if:Four Columns" content="0">
     <meta name="color:Background color" color content="#FFFFFF">
+    
+    {block:hidden}
+    <meta name="select:Layout Type" content="onecolumn" title="1 Column">
+    <meta name="select:Layout Type" content="twocolumns" title="2 Column">
+    <meta name="select:Layout Type" content="threecolumns" title="3 Column">
+    <meta name="select:Layout Type" content="fourcolumns" title="4 Column">
+    <!--
+    /* Background pattern from subtlepatterns.com */
+    /* Background pattern from subtlepatterns.com */
+    -->
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/XPHof9y2z/binding_dark.png" title="Blinding Dark">
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/G1Qof9y4e/black_lozenge.png" title="Black Lozenge">
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/zX5of9y4w/congruent_outline.png" title="Congruent Outline">
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/oFlof9y5b/dark_dotted.png" title="Dark Dotted">
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/InOof9y5l/dark_embroidery.png" title="Dark Embroidery">
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/I3Sof9y62/dark_exa.png" title="Dark Exa">
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/SCWof9y6a/footer_lodyas.png" title="Footer Lodyas">
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/vQbof9y79/moulin.png" title="Moulin">
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/okRof9y7j/office.png" title="Office">
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/VoLof9y7q/pw_maze_black.png" title="Maze Black">
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/990of9y7u/stardust.png" title="Stardust">
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/fP1of9y8r/stressed_linen.png" title="Stressed Linen">
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/VLPof9y8w/tweed.png" title="Tweed">
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/mhXof9y90/use_your_illusion.png" title="Use Your Illusion">
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/Qatof9y98/zwartevilt.jpg" title="Zwartevilt">
+    
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/aKaofbfv3/brickwall__2x.png" title="Brickwall">
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/HkOofbfvh/cream_pixels__2x.png" title="Cream Pixels">
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/Sxtofbfvi/diamond_upholstery__2x.png" title="Diamond Upholstery">
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/tEFofbfvi/dimension__2x.png" title="Dimension">
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/jA6ofbfxu/escheresque__2x.png" title="Escheresque">
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/7coofbfxu/gplaypattern__2x.png" title="Gplay Pattern">
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/qd9ofbfxv/hoffman__2x.png" title="Hoffman">
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/mvqofbfxv/light_honeycomb__2x.png" title="Light Honeycomb">
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/az6ofbfyh/light_wool__2x.png" title="Light Wool">
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/olJofbfyj/noisy_grid__2x.png" title="Noisy Grid">
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/W3nofbfyj/pw_maze_white__2x.png" title="Maze White">
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/BzKofbfyj/sneaker_mesh_fabric__2x.png" title="Sneaker Mesh Fabric">
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/Gm7ofbfze/swirl_pattern.png" title="Swirl Pattern">
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/1rTofbfzf/symphony.png" title="Symphony">
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/5o6ofbfzf/white_brick_wall__2x.png" title="White Brick Wall">
+    <meta name="select:Pattern style" content="" title="None">
+    {/block:hidden}
 <!-- END META TAGS - END META TAGS - END META TAGS - END META TAGS -->
     </head>
     <body class="{block:IndexPage}index-page{/block:IndexPage}">
@@ -208,12 +252,12 @@
 <!-- START MAIN CONTENT CONTAINER - START MAIN CONTENT CONTAINER -->
             <div class="container-fluid contentcontainer {block:PermalinkPage}col-md-12{/block:PermalinkPage}">
                 <div class="grid {block:PermalinkPage}col-md-12 fullwidth{/block:PermalinkPage}">
-                    <div class="grid-sizer {block:IndexPage}{block:ifTwoColumns}twocolumns{/block:ifTwoColumns} {block:ifThreeColumns}threecolumns{/block:ifThreeColumns} {block:ifFourColumns}fourcolumns{/block:ifFourColumns}{/block:IndexPage}"></div>
+                    <div class="grid-sizer {block:IndexPage} {select:Layout Type} {/block:IndexPage}"></div>
 <!-- START BLOCK POSTS - START BLOCK POSTS - START BLOCK POSTS  -->
                     {block:Posts}
 
                     {block:Photo}
-                        <div class="grid-item {block:IndexPage}{block:ifTwoColumns}twocolumns{/block:ifTwoColumns} {block:ifThreeColumns}threecolumns{/block:ifThreeColumns} {block:ifFourColumns}fourcolumns{/block:ifFourColumns}{/block:IndexPage} {block:PermalinkPage}col-md-12{/block:PermalinkPage}">
+                        <div class="grid-item {block:IndexPage} {select:Layout Type} {/block:IndexPage} {block:PermalinkPage}col-md-12{/block:PermalinkPage}">
                             <div class="inside-item">
                                 {block:HighRes} 
                                     {block:IndexPage}<a href="{Permalink}">{/block:IndexPage} <img src="{PhotoURL-HighRes}">{block:IndexPage}</a>{/block:IndexPage}
@@ -223,7 +267,7 @@
                     {/block:Photo}
 
                     {block:Photoset}
-                        <div class="grid-item {block:IndexPage}firstimg {block:ifTwoColumns}twocolumns{/block:ifTwoColumns} {block:ifThreeColumns}threecolumns{/block:ifThreeColumns} {block:ifFourColumns}fourcolumns{/block:ifFourColumns}{/block:IndexPage} {block:PermalinkPage}col-md-12{/block:PermalinkPage}">
+                        <div class="grid-item {block:IndexPage}firstimg {select:Layout Type} {/block:IndexPage} {block:PermalinkPage}col-md-12{/block:PermalinkPage}">
                             <div class="inside-item">
 
                                 {block:IndexPage}
@@ -242,13 +286,13 @@
                                                 {PostNotes-64}
                                             {/block:PostNotes}
                                         </div>
-                                    </div>                                    
+                                    </div>
                                 {/block:PermalinkPage}
 
                             </div>
                         </div>
                     {/block:Photoset}
-
+                    
                     {/block:Posts}
 <!-- END BLOCK POSTS - END BLOCK POSTS - END BLOCK POSTS - END BLOCK POSTS -->
                 </div>
