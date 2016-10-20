@@ -91,23 +91,7 @@
         display: block;
         clear: both;
     }
-
-    .onecolumn{
-        width: 100%;
-    }
     
-    .twocolumns{
-        width: 50%;
-    }
-    
-    .threecolumns{
-        width: 33.3333%;
-    }
-    
-    .fourcolumns{
-        width: 25%;
-    }
-        
     .grid-item {
         float: left;
         margin-bottom: 10px;
@@ -181,10 +165,10 @@
     <meta name="color:Background color" color content="#FFFFFF">
     
     {block:hidden}
-    <meta name="select:Layout Type" content="onecolumn" title="1 Column">
-    <meta name="select:Layout Type" content="twocolumns" title="2 Column">
-    <meta name="select:Layout Type" content="threecolumns" title="3 Column">
-    <meta name="select:Layout Type" content="fourcolumns" title="4 Column">
+    <meta name="select:Layout Type" content=" col-md-12 col-xs-12 col-sm-12 col-lg-12 " title="1 Column">
+    <meta name="select:Layout Type" content=" col-md-6 col-xs-6 col-sm-6 col-lg-6 " title="2 Column">
+    <meta name="select:Layout Type" content=" col-md-4 col-xs-4 col-sm-4 col-lg-4 " title="3 Column">
+    <meta name="select:Layout Type" content=" col-md-3 col-xs-3 col-sm-3 col-lg-3 " title="4 Column">
     <!--
     /* Background pattern from subtlepatterns.com */
     /* Background pattern from subtlepatterns.com */
@@ -252,7 +236,6 @@
 <!-- START MAIN CONTENT CONTAINER - START MAIN CONTENT CONTAINER -->
             <div class="container-fluid contentcontainer {block:PermalinkPage}col-md-12{/block:PermalinkPage}">
                 <div class="grid {block:PermalinkPage}col-md-12 fullwidth{/block:PermalinkPage}">
-                    <div class="grid-sizer {block:IndexPage} {select:Layout Type} {/block:IndexPage}"></div>
 <!-- START BLOCK POSTS - START BLOCK POSTS - START BLOCK POSTS  -->
                     {block:Posts}
 
@@ -265,7 +248,7 @@
                             </div>
                         </div>
                     {/block:Photo}
-
+                        
                     {block:Photoset}
                         <div class="grid-item {block:IndexPage}firstimg {select:Layout Type} {/block:IndexPage} {block:PermalinkPage}col-md-12{/block:PermalinkPage}">
                             <div class="inside-item">
@@ -292,7 +275,7 @@
                             </div>
                         </div>
                     {/block:Photoset}
-                    
+                        
                     {/block:Posts}
 <!-- END BLOCK POSTS - END BLOCK POSTS - END BLOCK POSTS - END BLOCK POSTS -->
                 </div>
