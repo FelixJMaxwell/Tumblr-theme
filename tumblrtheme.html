@@ -1,9 +1,10 @@
 <!DOCTYPE>
 <html>
     <head>
-<!-- OTHERS - OTHERS - OTHERS - OTHERS - OTHERS - OTHERS - OTHERS - OTHERS -->
+
     <link rel="shortcut icon" href="{Favicon}">
-<!-- OTHERS - OTHERS - OTHERS - OTHERS - OTHERS - OTHERS - OTHERS - OTHERS -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
+
     <meta name="viewport" content="width=device-width, initial-scale=0">
     <!-- JQUERY -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
@@ -16,74 +17,133 @@
     <script text="Javascript" src="https://unpkg.com/isotope-layout@3.0/dist/isotope.pkgd.min.js"></script>
         <!-- images loaded-->
     <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
-    <style>
-/* OTHERS - OTHERS - OTHERS - OTHERS - OTHERS - OTHERS - OTHERS -  */
-    #bg{
-        background: url({HeaderImage}) no-repeat;
-        background-size: cover;
-        width: 100%;
-        height: 350px;
-        margin: 0;
+    <!-- photoset grid -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoset-grid/1.0.1/jquery.photoset-grid.min.js"></script>
+    <title>{Title}</title>
+
+    {block:hidden}
+    <!--
+    Background pattern from subtlepatterns.com
+    Background pattern from subtlepatterns.com
+    -->
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/XPHof9y2z/binding_dark.png" title="Blinding Dark"/>
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/G1Qof9y4e/black_lozenge.png" title="Black Lozenge"/>
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/zX5of9y4w/congruent_outline.png" title="Congruent Outline"/>
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/oFlof9y5b/dark_dotted.png" title="Dark Dotted"/>
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/InOof9y5l/dark_embroidery.png" title="Dark Embroidery"/>
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/I3Sof9y62/dark_exa.png" title="Dark Exa"/>
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/SCWof9y6a/footer_lodyas.png" title="Footer Lodyas"/>
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/vQbof9y79/moulin.png" title="Moulin"/>
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/okRof9y7j/office.png" title="Office"/>
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/VoLof9y7q/pw_maze_black.png" title="Maze Black"/>
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/990of9y7u/stardust.png" title="Stardust"/>
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/fP1of9y8r/stressed_linen.png" title="Stressed Linen"/>
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/VLPof9y8w/tweed.png" title="Tweed"/>
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/mhXof9y90/use_your_illusion.png" title="Use Your Illusion"/>
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/Qatof9y98/zwartevilt.jpg" title="Zwartevilt"/>
+
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/aKaofbfv3/brickwall__2x.png" title="Brickwall"/>
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/HkOofbfvh/cream_pixels__2x.png" title="Cream Pixels"/>
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/Sxtofbfvi/diamond_upholstery__2x.png" title="Diamond Upholstery"/>
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/tEFofbfvi/dimension__2x.png" title="Dimension"/>
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/jA6ofbfxu/escheresque__2x.png" title="Escheresque"/>
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/7coofbfxu/gplaypattern__2x.png" title="Gplay Pattern"/>
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/qd9ofbfxv/hoffman__2x.png" title="Hoffman"/>
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/mvqofbfxv/light_honeycomb__2x.png" title="Light Honeycomb"/>
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/az6ofbfyh/light_wool__2x.png" title="Light Wool"/>
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/olJofbfyj/noisy_grid__2x.png" title="Noisy Grid"/>
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/W3nofbfyj/pw_maze_white__2x.png" title="Maze White"/>
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/BzKofbfyj/sneaker_mesh_fabric__2x.png" title="Sneaker Mesh Fabric"/>
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/Gm7ofbfze/swirl_pattern.png" title="Swirl Pattern"/>
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/1rTofbfzf/symphony.png" title="Symphony"/>
+    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/5o6ofbfzf/white_brick_wall__2x.png" title="White Brick Wall"/>
+
+    <meta name="select:Pattern style" content="" title="None"/>
+    
+    <meta name="select:Header Type" content="HeaderOnTop" title="Header Top"/>
+    <meta name="select:Header Type" content="HeaderAsideBar" title="Header Aside"/>
+    <meta name="if:Show Avatar" content="1"/>
+    <meta name="if:Show Total Pages" content="1"/>
+    <meta name="color:Font Color" content="#FFFFFF"/>
+    <meta name="color:Background color" content=""/>
+    <meta name="color:Background border color" content=""/>
+    <meta name="select:Layout Type" content=" col-md-12 col-xs-12 col-sm-12 col-lg-12 " title="1 Column">
+    <meta name="select:Layout Type" content=" col-md-6 col-xs-6 col-sm-6 col-lg-6 " title="2 Column">
+    <meta name="select:Layout Type" content=" col-md-4 col-xs-4 col-sm-4 col-lg-4 " title="3 Column">
+    <meta name="select:Layout Type" content=" col-md-3 col-xs-3 col-sm-3 col-lg-3 " title="4 Column">
+    {/block:hidden}
+
+<style>
+    *,a,a:hover{
+        color: {color:Font Color};
     }
     
     body{
         background: url('{select:Pattern style}') repeat {color:Background color};
     }
     
-    .center-block {
-        display: block;
-        margin-left: auto;
-        margin-right: auto
+    .bg{
+        background: url({HeaderImage}) no-repeat;
+        background-size: cover;
+        background-position: 50% 15%;
+        height: 200px;
     }
-/* OTHERS - OTHERS - OTHERS - OTHERS - OTHERS - OTHERS - OTHERS -  */
 
-/* START USER AVATAR SECTION, TITLE AND DESCRIPTION */
-    #useravatar{
-        margin-top: -75px;
-        border: 1px solid black;
-        border-radius: 10px;
-    }
-        
-    #useravatarnoheaderimage{
-        margin-top: 50px;
-        border-radius: 10px;
-    }
-        
-    #titleanddescripion{
+    .usrimgtitledescription ul li{
+        list-style: none;
         text-align: center;
-    }
-        
-    #titleanddescripion h1{
-        border-bottom: 1px solid black;
-        width: 70%;
-        padding-bottom: 10px;
-    }
-/* END USER AVATAR SECTION, TITLE AND DESCRIPTION */
-     
-/* START NAVIGATION BAR - START NAVIGATION BAR - START NAVIGATION BAR */
-    .navbar-nav{
-        text-align: center;
-        height: 40px;
     }
     
-    .navbar-nav p{
-        display: inline-block;
-        margin: 10px;
-        color: black;
+    .usrimgtitledescription ul li img{
+        margin-top: -70px;
+        border-radius: 20px;
     }
     
     .affix{
-      top: -10px;
-      z-index: 100;
-      background: url('{select:Pattern style}') repeat {color:Background color};
+        width: 100%;
+        top: -10px;
+        z-index: 1;
+        background: url('{select:Pattern style}') repeat;
     }
 
-/* END NAVIGATION BAR - END NAVIGATION BAR - END NAVIGATION BAR */
-
-/* START CSS CONTENT - START CSS CONTENT - START CSS CONTENT */
-    .grid{
-        /*width: 90%;*/
-        margin: 0 auto;
+    .affix a i{
+        margin-top: 20px;
+    }
+    
+    .containernav{
+        height: 40px;
+        padding: 0;
+    }
+    
+    .containernav ul{
+        text-align: center;
+    }
+    
+    .containernav ul li{
+        margin-right: 30px;
+        list-style: none;
+        display: inline-block;
+    }
+    
+    .containernav ul li a{
+        text-decoration: none;
+        font-size: 15px;
+    }
+    
+    .footercontainer ul{
+        list-style: none;
+        text-align: center;
+    }
+    
+    .footercontainer ul li{
+        display: inline;
+        margin-right: 10px;
+    }
+    
+    .navbar-nav{
+        width: 100%;
+        margin: 0;
+        padding: 0;
     }
     
     .grid:after {
@@ -96,227 +156,175 @@
         float: left;
         margin-bottom: 10px;
     }
-
-    .grid-item img {
-        display: block;
-        width: 100%;
+    
+    .bgborder{
+        background-color: {color:Background border color};
+        padding-top: 10px;
+        padding-bottom: 5px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0;
     }
     
     .inside-item{
         width: 95%;
+        height: 95%;
+        display: block;
         margin: 0 auto;
     }
     
-    .firstimg a img{
-        display: none;
-    }
-    
-    .firstimg a:first-child img{
-        display: block;
-    }
-/* END CSS CONTENT - END CSS CONTENT - END CSS CONTENT - END CSS CONTENT */
-
-/* START FOOTER - START FOOTER - START FOOTER - START FOOTER - */
-    .footercontainer ul{
-        list-style: none;
-    }
-    
-    .footercontainer ul li:nth-child(1){
-        text-align: right;
-    }
-    
-    .numpages{
-        text-align: center;
-    }
-/* END FOOTER - END FOOTER - END FOOTER - END FOOTER - END FOOTER - */
-
-/* START PERMA LINK PAGES - START PERMA LINK PAGES - START PERMA LINK PAGES */
-    .fullwidth{
+    .inside-item img{
         width: 100%;
-        height: 100% !important;
     }
     
-    ol.notes {
-        padding: 0px;
-        margin: 25px 0px;
-        list-style-type: none;
+    .likereblog{
+        height: 30px;
     }
-
-    ol.notes li.note img.avatar {
-        vertical-align: -4px;
+    
+    .likereblog ul li{
+        list-style: none;
+        float: right;
+        display: inline-block;
         margin-right: 10px;
-        width: 64px;
-        height: 64px;
     }
     
-    ol li{
-        display: inline-table;
+    .like{
+        color: blue;
     }
     
-    ol li span.action{
-        display: none;
+    .photoset-grid{
+        margin: 0 auto;
     }
-/* END PERMA LINK PAGES - END PERMA LINK PAGES - END PERMA LINK PAGES */
-    </style>
-    <title>{Title}</title>
-<!-- START META TAGS - START META TAGS - START META TAGS - START META TAGS -->
-    <meta name="if:Show Header Image" content="1">
-    <meta name="if:Show Avatar" content="0">
-    <meta name="color:Background color" color content="#FFFFFF">
-    
-    {block:hidden}
-    <meta name="select:Layout Type" content=" col-md-12 col-xs-12 col-sm-12 col-lg-12 " title="1 Column">
-    <meta name="select:Layout Type" content=" col-md-6 col-xs-6 col-sm-6 col-lg-6 " title="2 Column">
-    <meta name="select:Layout Type" content=" col-md-4 col-xs-4 col-sm-4 col-lg-4 " title="3 Column">
-    <meta name="select:Layout Type" content=" col-md-3 col-xs-3 col-sm-3 col-lg-3 " title="4 Column">
-    <!--
-    /* Background pattern from subtlepatterns.com */
-    /* Background pattern from subtlepatterns.com */
-    -->
-    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/XPHof9y2z/binding_dark.png" title="Blinding Dark">
-    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/G1Qof9y4e/black_lozenge.png" title="Black Lozenge">
-    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/zX5of9y4w/congruent_outline.png" title="Congruent Outline">
-    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/oFlof9y5b/dark_dotted.png" title="Dark Dotted">
-    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/InOof9y5l/dark_embroidery.png" title="Dark Embroidery">
-    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/I3Sof9y62/dark_exa.png" title="Dark Exa">
-    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/SCWof9y6a/footer_lodyas.png" title="Footer Lodyas">
-    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/vQbof9y79/moulin.png" title="Moulin">
-    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/okRof9y7j/office.png" title="Office">
-    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/VoLof9y7q/pw_maze_black.png" title="Maze Black">
-    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/990of9y7u/stardust.png" title="Stardust">
-    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/fP1of9y8r/stressed_linen.png" title="Stressed Linen">
-    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/VLPof9y8w/tweed.png" title="Tweed">
-    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/mhXof9y90/use_your_illusion.png" title="Use Your Illusion">
-    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/Qatof9y98/zwartevilt.jpg" title="Zwartevilt">
-    
-    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/aKaofbfv3/brickwall__2x.png" title="Brickwall">
-    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/HkOofbfvh/cream_pixels__2x.png" title="Cream Pixels">
-    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/Sxtofbfvi/diamond_upholstery__2x.png" title="Diamond Upholstery">
-    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/tEFofbfvi/dimension__2x.png" title="Dimension">
-    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/jA6ofbfxu/escheresque__2x.png" title="Escheresque">
-    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/7coofbfxu/gplaypattern__2x.png" title="Gplay Pattern">
-    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/qd9ofbfxv/hoffman__2x.png" title="Hoffman">
-    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/mvqofbfxv/light_honeycomb__2x.png" title="Light Honeycomb">
-    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/az6ofbfyh/light_wool__2x.png" title="Light Wool">
-    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/olJofbfyj/noisy_grid__2x.png" title="Noisy Grid">
-    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/W3nofbfyj/pw_maze_white__2x.png" title="Maze White">
-    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/BzKofbfyj/sneaker_mesh_fabric__2x.png" title="Sneaker Mesh Fabric">
-    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/Gm7ofbfze/swirl_pattern.png" title="Swirl Pattern">
-    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/1rTofbfzf/symphony.png" title="Symphony">
-    <meta name="select:Pattern style" content="http://static.tumblr.com/cdumqfg/5o6ofbfzf/white_brick_wall__2x.png" title="White Brick Wall">
-    <meta name="select:Pattern style" content="" title="None">
-    {/block:hidden}
-<!-- END META TAGS - END META TAGS - END META TAGS - END META TAGS -->
+</style>
+
     </head>
     <body class="{block:IndexPage}index-page{/block:IndexPage}">
-<!-- START HEADER - START HEADER - START HEADER - START HEADER -->
         <header>
-        {block:ifShowHeaderImage}<div id="bg"></div>{/block:ifShowHeaderImage}
             <div class="container-fluid">
-            {block:ifShowAvatar}
-                <div class="col-md-12">
-                    <img id="useravatar{block:ifNotShowHeaderImage}noheaderimage{/block:ifNotShowHeaderImage}" alt="useravatar" src="{PortraitURL-128}" class="center-block">
-                </div>
-            {/block:ifShowAvatar}
-                <div id="titleanddescripion" class="col-md-12">
-                    <h1 class="h1 center-block">{Title}</h1>
-                    <h4 class="h4">{Description}</h4>
+                <div class="row">
+                    <div class="headercontainer">
+                        <div class="bg"></div>
+                        <div class="usrimgtitledescription">
+                            <ul>
+                                <li>{block:ifShowAvatar}<img src="{PortraitURL-128}" alt="imagen de perfil">{/block:ifShowAvatar}
+                                <li><h1>{Title}</h1>
+                                <li><h3>{Description}</h3></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </header>
-<!-- END HEADER - END HEADER - END HEADER - END HEADER - END HEADER -->
-<!-- NAVIGATION BAR - NAVIGATION BAR - NAVIGATION BAR - NAVIGATION BAR -->
-        <nav class="navbar navigationbar">
-                <ul class="nav navbar-nav col-md-12 col-xs-12" data-spy="affix" data-offset-top="518">
-                    <a href="{BlogURL}"><p>Home</p></a>
-                    <a href="/archive"><p>Archive</p></a>
-                </ul>
-        </nav>
-<!-- END NAVIGATION BAR - END NAVIGATION BAR -->
-<!-- START MAIN CONTENT CONTAINER - START MAIN CONTENT CONTAINER -->
-            <div class="container-fluid contentcontainer {block:PermalinkPage}col-md-12{/block:PermalinkPage}">
-                <div class="grid {block:PermalinkPage}col-md-12 fullwidth{/block:PermalinkPage}">
-<!-- START BLOCK POSTS - START BLOCK POSTS - START BLOCK POSTS  -->
-                    {block:Posts}
-
-                    {block:Photo}
-                        <div class="grid-item {block:IndexPage} {select:Layout Type} {/block:IndexPage} {block:PermalinkPage}col-md-12{/block:PermalinkPage}">
-                            <div class="inside-item">
-                                {block:HighRes} 
-                                    {block:IndexPage}<a href="{Permalink}">{/block:IndexPage} <img src="{PhotoURL-HighRes}">{block:IndexPage}</a>{/block:IndexPage}
-                                {/block:HighRes} 
-                            </div>
+            
+            <nav>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12 containernav">
+                            <ul data-spy="affix" data-offset-top="370">
+                                <li><a href="{BlogURL}"><i class="fa fa-home"></i> Home</a></li>
+                                <li><a href="/Archive"><i class="fa fa-archive"></i> Archive</a></li>
+                                <li><a href="/ask"><i class="fa fa-question"></i> Ask me</a></li>
+                            </ul>
                         </div>
-                    {/block:Photo}
-                        
-                    {block:Photoset}
-                        <div class="grid-item {block:IndexPage}firstimg {select:Layout Type} {/block:IndexPage} {block:PermalinkPage}col-md-12{/block:PermalinkPage}">
-                            <div class="inside-item">
+                    </div>
+                </div>
+            </nav>            
+        </header>
 
-                                {block:IndexPage}
-                                    {block:Photos}
-                                        {block:IndexPage}<a href="{Permalink}">{/block:IndexPage}<img src="{PhotoURL-500}"/>{block:IndexPage}</a>{/block:IndexPage}
-                                    {/block:Photos}
-                                {/block:IndexPage}
-
-                                {block:PermalinkPage}
-                                    <div class="permalinkpagesets">
-                                        <div class="Permaset-item col-md-6">
-                                            {Photoset-500}
+        
+        <div class="container-fluid">
+            <div class="row">
+                <div>
+                    <div class="grid">
+                        {block:Posts}
+    
+                            {block:Photo}
+                                <div class="grid-item {select:Layout Type}">
+                                    <div class="bgborder">
+                                        <div class="inside-item">
+                                            {block:IndexPage}<a href="{PermaLink}" target="_Blank">{/block:IndexPage}<img src="{PhotoURL-HighRes}">{block:IndexPage}</a>{/block:IndexPage}
                                         </div>
-                                        <div class="notes col-md-6">
-                                            {block:PostNotes}
-                                                {PostNotes-64}
-                                            {/block:PostNotes}
+                                        
+                                        <div class="likereblog">
+                                            <ul>
+                                                <li>{NoteCountWithLabel}</li>
+                                                <li><a href="{ReblogURL}"><i class="fa fa-share fa-lg"></i></a></li>
+                                                <li>{LikeButton color="black"}</li>
+                                            </ul>
                                         </div>
                                     </div>
-                                {/block:PermalinkPage}
-
-                            </div>
-                        </div>
-                    {/block:Photoset}
+                                </div>
+                            {/block:Photo}
                         
-                    {/block:Posts}
-<!-- END BLOCK POSTS - END BLOCK POSTS - END BLOCK POSTS - END BLOCK POSTS -->
+                            {block:Photoset}
+                                <div class="grid-item {select:Layout Type}">
+                                    <div class="bgborder">
+                                        <div class="inside-item">
+                                            <div class="photoset-grid" data-layout="{PhotosetLayout}">
+                                                {block:Photos}
+                                                    <img src="{PhotoURL-HighRes}">
+                                                {/block:Photos}
+                                            </div>
+                                            <div class="likereblog">
+                                                <ul>
+                                                    <li>{NoteCountWithLabel}</li>
+                                                    <li><a href="{ReblogURL}"><i class="fa fa-share fa-lg"></i></a></li>
+                                                    <li>{LikeButton color="black"}</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {/block:Photoset}
+                        
+                        {/block:Posts}
+                    </div>
                 </div>
             </div>
-<!-- END MAIN CONTENT CONTAINER - END MAIN CONTENT CONTAINER -->
-<!-- START FOOTER - START FOOTER - START FOOTER - START FOOTER  -->
-            <footer>
-                <div class="footercontainer col-md-12">
-                    {block:IndexPage}
-                        {block:Pagination}
-                            <ul>
-                                <li class="col-md-5"></i>
-                                <li class="col-md-2 numpages">
-                                    {block:JumpPagination lenght="5"}
-                                        {block:CurrentPage}
-                                            <span>{PageNumber}</span>
-                                        {/block:CurrentPage}
-                                        {block:JumpPage}
-                                            <a href="{URL}">{PageNumber}</a>
-                                        {/block:JumpPage}
-                                    {/block:JumpPagination}
-                                </li>
-                                <li class="col-md-5"></li>
-                            </ul>
-                        {/block:Pagination}
-                    {/block:IndexPage}
+        </div>
+        
+        
+        <footer>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="footercontainer">
+                        {block:IndexPage}
+                            {block:Pagination}
+                                <ul>
+                                    {block:PreviousPage}
+                                        <li><a href="{PreviousPage}"><i class="fa fa-backward"></i></a>
+                                    {/block:PreviousPage}    
+                                        <li>{CurrentPage}{block:ifShowTotalPages}/{TotalPages}{/block:ifShowTotalPages}
+                                    {block:NextPage}
+                                        <li><a href="{NextPage}"><i class="fa fa-forward"></i></a></li>
+                                    {/block:NextPage}
+                                </ul>
+                            {/block:Pagination}
+                        {/block:IndexPage}
+                    </div>
                 </div>
-            </footer>
-<!-- END FOOTER --><!-- END FOOTER --><!-- END FOOTER --><!-- END FOOTER -->
+            </div>
+        </footer>
+            
+
 <!-- WRITE MORE HTML STUFF BEFORE THIS PART -->
 <!-- SCRIPTS AT THE END OF THE BODY -->
-            <script>
-                $(document).ready(function() {
-                    var $grid = $('.grid').masonry({
-                    itemSelector: '.grid-item',
+        <script>
+            $(document).ready(function() {
+                var $grid = $('.grid').masonry({
+                itemSelector: '.grid-item',
+            });
+
+            $('.grid').imagesLoaded().progress(function() {
+                $grid.masonry();
                 });
-                
-                $('.grid').imagesLoaded().progress(function() {
-                    $grid.masonry();
-                    });
-                });
-            </script>
+            });
+            
+            $('.photoset-grid').photosetGrid({
+                onComplete: function(){
+                    $('.photoset-grid').css({
+                        'visiblity': 'visible'
+                        });
+                    }
+            });
+        </script>
     </body>
 </html>
