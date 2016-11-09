@@ -67,10 +67,14 @@
     <meta name="color:Font Color" content="#FFFFFF"/>
     <meta name="color:Background color" content=""/>
     <meta name="color:Background border color" content=""/>
-    <meta name="select:Layout Type" content=" col-md-12 col-xs-12 col-sm-12 col-lg-12 " title="1 Column">
-    <meta name="select:Layout Type" content=" col-md-6 col-xs-6 col-sm-6 col-lg-6 " title="2 Column">
-    <meta name="select:Layout Type" content=" col-md-4 col-xs-4 col-sm-4 col-lg-4 " title="3 Column">
-    <meta name="select:Layout Type" content=" col-md-3 col-xs-3 col-sm-3 col-lg-3 " title="4 Column">
+    <meta name="select:Layout Type" content=" col-md-12 col-xs-12 col-sm-12 " title="1 Column">
+    <meta name="select:Layout Type" content=" col-md-6 col-xs-12 col-sm-6" title="2 Column">
+    <meta name="select:Layout Type" content=" col-md-4 col-xs-12 col-sm-4" title="3 Column">
+    <meta name="select:Layout Type" content=" col-md-3 col-xs-12 col-sm-3" title="4 Column">
+    <meta name="if:Show Caption Under Post" content="1"/>
+    <meta name="select:Caption Style" content="rightstyle" title="Right Style"/>
+    <meta name="select:Caption Style" content="leftstyle" title="Left Style"/>
+    <meta name="select:Caption Style" content="centerstyle" title="Center Style"/>
     {/block:hidden}
 
 <style>
@@ -104,14 +108,17 @@
         top: -10px;
         z-index: 1;
         background: url('{select:Pattern style}') repeat;
+        border-bottom: 1px solid black;
+        height: 50px;
     }
 
-    .affix a i{
+    .affix a i, .affix-top a i{
         margin-top: 20px;
+        font-size: 25px;
     }
     
     .containernav{
-        height: 40px;
+        height: 60px;
         padding: 0;
     }
     
@@ -128,6 +135,10 @@
     .containernav ul li a{
         text-decoration: none;
         font-size: 15px;
+    }
+    
+    .containernav ul li a i{
+        font-size: 20px;
     }
     
     .footercontainer ul{
@@ -154,7 +165,7 @@
     
     .grid-item {
         float: left;
-        margin-bottom: 10px;
+        margin-bottom: 25px;
     }
     
     .bgborder{
@@ -165,15 +176,60 @@
         box-shadow: 0 0 10px 0;
     }
     
+    .jfpp{
+        padding-bottom: 10px;
+    }
+    
+    .captionpp{
+        background: {color:Background border color};
+        padding-top: 10px;
+        padding-bottom: 5px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0;
+    }
+    
+    .notespp, .commentpp{
+        margin-top: 15px;
+    }
+    
+    .notespp{
+        height: 260px;
+    }
+    
+    .insidenotes{
+        width: 100%;
+        height: 99%;
+        overflow-y: scroll;
+    }
+    
+    .inside-itempp{
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .inside-itempp img{
+        width: 100%;
+    }
+    
     .inside-item{
         width: 95%;
-        height: 95%;
         display: block;
         margin: 0 auto;
     }
     
     .inside-item img{
         width: 100%;
+    }
+    
+    .likereblogpp ul{
+        text-align: center;
+    }
+    
+    .likereblogpp ul li{
+        list-style: none;
+        margin-right: 10px;
+        display: inline-block;
     }
     
     .likereblog{
@@ -187,8 +243,16 @@
         margin-right: 10px;
     }
     
-    .like{
-        color: blue;
+    .centerstyle{
+        text-align: center;
+    }
+    
+    .leftstyle{
+        text-align: left;
+    }
+    
+    .rightstyle{
+        text-align: right;
     }
     
     .photoset-grid{
@@ -217,16 +281,16 @@
             <nav>
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-12 containernav">
+                        <div class="col-md-12 col-xs-12 containernav">
                             <ul data-spy="affix" data-offset-top="370">
                                 <li><a href="{BlogURL}"><i class="fa fa-home"></i> Home</a></li>
-                                <li><a href="/Archive"><i class="fa fa-archive"></i> Archive</a></li>
+                                <li><a href="/archive"><i class="fa fa-archive"></i> Archive</a></li>
                                 <li><a href="/ask"><i class="fa fa-question"></i> Ask me</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
-            </nav>            
+            </nav>  
         </header>
 
         
@@ -237,32 +301,12 @@
                         {block:Posts}
     
                             {block:Photo}
-                                <div class="grid-item {select:Layout Type}">
-                                    <div class="bgborder">
-                                        <div class="inside-item">
+                                <div class="grid-item {block:IndexPage}{select:Layout Type}{/block:IndexPage}{block:PermalinkPage}col-md-12{/block:PermalinkPage}">
+                                    <div class="bgborder {block:PermalinkPage} jfpp col-md-6 col-xs-12 col-sm-6{/block:PermalinkPage}">
+                                        <div class="inside-item{block:PermalinkPage}pp{/block:PermalinkPage}">
                                             {block:IndexPage}<a href="{PermaLink}" target="_Blank">{/block:IndexPage}<img src="{PhotoURL-HighRes}">{block:IndexPage}</a>{/block:IndexPage}
                                         </div>
-                                        
-                                        <div class="likereblog">
-                                            <ul>
-                                                <li>{NoteCountWithLabel}</li>
-                                                <li><a href="{ReblogURL}"><i class="fa fa-share fa-lg"></i></a></li>
-                                                <li>{LikeButton color="black"}</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            {/block:Photo}
-                        
-                            {block:Photoset}
-                                <div class="grid-item {select:Layout Type}">
-                                    <div class="bgborder">
-                                        <div class="inside-item">
-                                            <div class="photoset-grid" data-layout="{PhotosetLayout}">
-                                                {block:Photos}
-                                                    <img src="{PhotoURL-HighRes}">
-                                                {/block:Photos}
-                                            </div>
+                                        {block:IndexPage}
                                             <div class="likereblog">
                                                 <ul>
                                                     <li>{NoteCountWithLabel}</li>
@@ -270,10 +314,101 @@
                                                     <li>{LikeButton color="black"}</li>
                                                 </ul>
                                             </div>
+                                            {block:ifShowCaptionUnderPost}
+                                                {block:Caption}
+                                                    <div class="caption {select:Caption Style}">
+                                                        {Caption}
+                                                    </div>
+                                                {/block:Caption}
+                                            {/block:ifShowCaptionUnderPost}
+                                        {/block:IndexPage}
+                                    </div>
+                                    
+                                    {block:PermalinkPage}
+                                        <div class="testing col-md-6 col-xs-12 col-sm-6">
+                                            <div class="captionpp col-md-12 col-sm-12">
+                                                <div class="likereblogpp">
+                                                    <ul>
+                                                        <li>{NoteCountWithLabel}</li>
+                                                        <li><a href="{ReblogURL}"><i class="fa fa-share fa-lg"></i></a></li>
+                                                        <li>{LikeButton color="black"}</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="captionpp commentpp col-md-12 col-sm-12">
+                                                {Caption}
+                                            </div>
+                                            <div class="captionpp notespp col-md-12 col-sm-12">
+                                                <div class="insidenotes">
+                                                    {block:PostNotes}
+                                                    {PostNotes}
+                                                {/block:PostNotes}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {/block:PermalinkPage}
+                                    
+                                </div>
+                            {/block:Photo}
+                        
+                            {block:Photoset}
+                                <div class="grid-item {block:IndexPage}{select:Layout Type}{/block:IndexPage}">
+                                    <div class="bgborder {block:PermalinkPage} jfpp col-md-6 col-xs-12 col-sm-6{/block:PermalinkPage}">
+                                        <div class="inside-item">
+                                            <div class="photoset-grid" data-layout="{PhotosetLayout}">
+                                                {block:Photos}
+                                                    {block:IndexPage}<a href="{PermaLink}" target="_Blank">{/block:IndexPage}<img src="{PhotoURL-HighRes}">{block:IndexPage}</a>{/block:IndexPage}
+                                                {/block:Photos}
+                                            </div>
+                                            {block:IndexPage}
+                                                <div class="likereblog">
+                                                    <ul>
+                                                        <li>{NoteCountWithLabel}</li>
+                                                        <li><a href="{ReblogURL}"><i class="fa fa-share fa-lg"></i></a></li>
+                                                        <li>{LikeButton color="black"}</li>
+                                                    </ul>
+                                                </div>
+                                                {block:ifShowCaptionUnderPost}
+                                                    {block:Caption}
+                                                        <div class="caption {select:Caption Style}">
+                                                            {Caption}
+                                                        </div>
+                                                    {/block:Caption}
+                                                {/block:ifShowCaptionUnderPost}
+                                            {/block:IndexPage}
                                         </div>
                                     </div>
+                                    
+                                                                        {block:PermalinkPage}
+                                        <div class="testing col-md-6 col-xs-12 col-sm-6">
+                                            <div class="captionpp col-md-12 col-sm-12">
+                                                <div class="likereblogpp">
+                                                    <ul>
+                                                        <li>{NoteCountWithLabel}</li>
+                                                        <li><a href="{ReblogURL}"><i class="fa fa-share fa-lg"></i></a></li>
+                                                        <li>{LikeButton color="black"}</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="captionpp commentpp col-md-12 col-sm-12">
+                                                {Caption}
+                                            </div>
+                                            <div class="captionpp notespp col-md-12 col-sm-12">
+                                                <div class="insidenotes">
+                                                    {block:PostNotes}
+                                                    {PostNotes}
+                                                {/block:PostNotes}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {/block:PermalinkPage}
+                                    
                                 </div>
                             {/block:Photoset}
+                            
+                            
+                            
+                            
                         
                         {/block:Posts}
                     </div>
@@ -308,6 +443,10 @@
 <!-- WRITE MORE HTML STUFF BEFORE THIS PART -->
 <!-- SCRIPTS AT THE END OF THE BODY -->
         <script>
+            if ( $.trim( $('.captionpp').text() ).length == 0 ) {
+	// check if div is empty, with &amp;nbsp; or white-space
+}
+            
             $(document).ready(function() {
                 var $grid = $('.grid').masonry({
                 itemSelector: '.grid-item',
