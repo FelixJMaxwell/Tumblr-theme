@@ -1,864 +1,1283 @@
 <!DOCTYPE>
 <html>
     <head>
-
-    <link rel="shortcut icon" href="{Favicon}">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
-
-    <meta name="viewport" content="width=device-width, initial-scale=0">
-    <!-- JQUERY -->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <!-- BOOTSTRAP 3.3.7 -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- masonry -->
-    <script text="Javascript" src="https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.min.js"></script>
-    <!-- isotope -->
-    <script text="Javascript" src="https://unpkg.com/isotope-layout@3.0/dist/isotope.pkgd.min.js"></script>
-        <!-- images loaded-->
-    <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
-    <!-- photoset grid -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoset-grid/1.0.1/jquery.photoset-grid.min.js"></script>
-    <title>{Title}</title>
-
-    {block:hidden}
-    <!--
-    Background pattern from subtlepatterns.com
-    Background pattern from subtlepatterns.com
-    -->
-    <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/XPHof9y2z/binding_dark.png" title="Blinding Dark"/>
-    <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/G1Qof9y4e/black_lozenge.png" title="Black Lozenge"/>
-    <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/zX5of9y4w/congruent_outline.png" title="Congruent Outline"/>
-    <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/oFlof9y5b/dark_dotted.png" title="Dark Dotted"/>
-    <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/InOof9y5l/dark_embroidery.png" title="Dark Embroidery"/>
-    <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/I3Sof9y62/dark_exa.png" title="Dark Exa"/>
-    <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/SCWof9y6a/footer_lodyas.png" title="Footer Lodyas"/>
-    <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/vQbof9y79/moulin.png" title="Moulin"/>
-    <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/okRof9y7j/office.png" title="Office"/>
-    <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/VoLof9y7q/pw_maze_black.png" title="Maze Black"/>
-    <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/990of9y7u/stardust.png" title="Stardust"/>
-    <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/fP1of9y8r/stressed_linen.png" title="Stressed Linen"/>
-    <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/VLPof9y8w/tweed.png" title="Tweed"/>
-    <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/mhXof9y90/use_your_illusion.png" title="Use Your Illusion"/>
-    <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/Qatof9y98/zwartevilt.jpg" title="Zwartevilt"/>
-
-    <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/aKaofbfv3/brickwall__2x.png" title="Brickwall"/>
-    <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/HkOofbfvh/cream_pixels__2x.png" title="Cream Pixels"/>
-    <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/Sxtofbfvi/diamond_upholstery__2x.png" title="Diamond Upholstery"/>
-    <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/tEFofbfvi/dimension__2x.png" title="Dimension"/>
-    <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/jA6ofbfxu/escheresque__2x.png" title="Escheresque"/>
-    <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/7coofbfxu/gplaypattern__2x.png" title="Gplay Pattern"/>
-    <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/qd9ofbfxv/hoffman__2x.png" title="Hoffman"/>
-    <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/mvqofbfxv/light_honeycomb__2x.png" title="Light Honeycomb"/>
-    <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/az6ofbfyh/light_wool__2x.png" title="Light Wool"/>
-    <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/olJofbfyj/noisy_grid__2x.png" title="Noisy Grid"/>
-    <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/W3nofbfyj/pw_maze_white__2x.png" title="Maze White"/>
-    <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/BzKofbfyj/sneaker_mesh_fabric__2x.png" title="Sneaker Mesh Fabric"/>
-    <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/Gm7ofbfze/swirl_pattern.png" title="Swirl Pattern"/>
-    <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/1rTofbfzf/symphony.png" title="Symphony"/>
-    <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/5o6ofbfzf/white_brick_wall__2x.png" title="White Brick Wall"/>
-
-    <meta name="select:Background Pattern Style" content="" title="None"/>
+        <link rel="shortcut icon" href="{Favicon}">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
     
-    <meta name="select:Header Type" content="HeaderOnTop" title="Header Top"/>
-    <meta name="select:Header Type" content="HeaderAsideBar" title="Header Aside"/>
-    <meta name="if:Show Avatar" content="1"/>
-    <meta name="if:Show Total Pages" content="1"/>
-    <meta name="color:Font Color" content="#FFFFFF"/>
-    <meta name="color:Background color" content=""/>
-    <meta name="color:Background border color" content=""/>
-    <meta name="select:Layout Type" content=" col-md-12 col-xs-12 col-sm-12 " title="1 Column">
-    <meta name="select:Layout Type" content=" col-md-6 col-xs-12 col-sm-6" title="2 Column">
-    <meta name="select:Layout Type" content=" col-md-4 col-xs-12 col-sm-4" title="3 Column">
-    <meta name="select:Layout Type" content=" col-md-3 col-xs-12 col-sm-3" title="4 Column">
-    <meta name="if:Show Caption Under Post" content="1"/>
-    <meta name="select:Caption Style" content="rightstyle" title="Right Style"/>
-    <meta name="select:Caption Style" content="leftstyle" title="Left Style"/>
-    <meta name="select:Caption Style" content="centerstyle" title="Center Style"/>
-    <meta name="select:Like Reblog Style" content="likereblogright" title="Right style"/>
-    <meta name="select:Like Reblog Style" content="likereblogleft" title="Left style"/>
-    <meta name="select:Like Reblog Style" content="likereblogcenter" title="Center style"/>
-    <meta name="if:Text Full Width" content="1"/>
-    <meta name="select:Text Post Style" content="textleft" title="Left Style"/>
-    <meta name="select:Text Post Style" content="textright" title="Right Style"/>
-    <meta name="select:Text Post Style" content="textjustify" title="Justify Style"/>
-    <meta name="select:Text Post Style On Permalink Page" content="col-md-12 col-sm-12 col-xs-12" title="Full Width"/>
-    <meta name="select:Text Post Style On Permalink Page" content="col-md-6 col-sm-6 col-xs-12" title="Default"/>
-    <meta name="color:URLs Color" content="#ff0000"/>
-    <meta name="color:Background Title Post" content="#223282"/>
-    <meta name="select:Link Post List Text Style" content="postlistright" title="Right Style"/>
-    <meta name="select:Link Post List Text Style" content="postlistcenter" title="Center Style"/>
-    <meta name="select:Link Post List Text Style" content="postlistleft" title="Left Style"/>
-    <meta name="color:Navigation Menu Color" content="#000000"/>
-    {/block:hidden}
-
-<style>
-    *{
-        color: {color:Font Color};
-    }
+        <meta name="viewport" content="width=device-width, initial-scale=0">
+        <!-- JQUERY -->
+        <script src="http://static.tumblr.com/cdumqfg/qeUohgnqa/jquery311.min.js"></script>
+        <!-- BOOTSTRAP 3.3.7 -->
+        <link rel="stylesheet" href="http://static.tumblr.com/cdumqfg/k73ohgns5/bootstrap3.3.7.min.css">
+        <script src="http://static.tumblr.com/cdumqfg/aDNohgnts/bootstrap3.3.7.min.js"></script>
+        <!-- isotope -->
+        <script text="Javascript" src="https://unpkg.com/isotope-layout@3.0/dist/isotope.pkgd.min.js"></script>
+            <!-- images loaded-->
+        <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+        <!-- photoset grid -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/photoset-grid/1.0.1/jquery.photoset-grid.min.js"></script>
+        <title>{Title}</title>
     
-    body a,a:hover{
-        color: {color:URLs Color};
-    }
+        {block:hidden}
+        <!--
+        Background pattern from subtlepatterns.com
+        Background pattern from subtlepatterns.com
+        -->
+        <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/XPHof9y2z/binding_dark.png" title="Blinding Dark"/>
+        <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/G1Qof9y4e/black_lozenge.png" title="Black Lozenge"/>
+        <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/zX5of9y4w/congruent_outline.png" title="Congruent Outline"/>
+        <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/oFlof9y5b/dark_dotted.png" title="Dark Dotted"/>
+        <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/InOof9y5l/dark_embroidery.png" title="Dark Embroidery"/>
+        <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/I3Sof9y62/dark_exa.png" title="Dark Exa"/>
+        <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/SCWof9y6a/footer_lodyas.png" title="Footer Lodyas"/>
+        <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/vQbof9y79/moulin.png" title="Moulin"/>
+        <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/okRof9y7j/office.png" title="Office"/>
+        <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/VoLof9y7q/pw_maze_black.png" title="Maze Black"/>
+        <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/990of9y7u/stardust.png" title="Stardust"/>
+        <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/fP1of9y8r/stressed_linen.png" title="Stressed Linen"/>
+        <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/VLPof9y8w/tweed.png" title="Tweed"/>
+        <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/mhXof9y90/use_your_illusion.png" title="Use Your Illusion"/>
+        <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/Qatof9y98/zwartevilt.jpg" title="Zwartevilt"/>
+        <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/aKaofbfv3/brickwall__2x.png" title="Brickwall"/>
+        <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/HkOofbfvh/cream_pixels__2x.png" title="Cream Pixels"/>
+        <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/Sxtofbfvi/diamond_upholstery__2x.png" title="Diamond Upholstery"/>
+        <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/tEFofbfvi/dimension__2x.png" title="Dimension"/>
+        <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/jA6ofbfxu/escheresque__2x.png" title="Escheresque"/>
+        <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/7coofbfxu/gplaypattern__2x.png" title="Gplay Pattern"/>
+        <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/qd9ofbfxv/hoffman__2x.png" title="Hoffman"/>
+        <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/mvqofbfxv/light_honeycomb__2x.png" title="Light Honeycomb"/>
+        <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/az6ofbfyh/light_wool__2x.png" title="Light Wool"/>
+        <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/olJofbfyj/noisy_grid__2x.png" title="Noisy Grid"/>
+        <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/W3nofbfyj/pw_maze_white__2x.png" title="Maze White"/>
+        <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/BzKofbfyj/sneaker_mesh_fabric__2x.png" title="Sneaker Mesh Fabric"/>
+        <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/Gm7ofbfze/swirl_pattern.png" title="Swirl Pattern"/>
+        <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/1rTofbfzf/symphony.png" title="Symphony"/>
+        <meta name="select:Background Pattern Style" content="http://static.tumblr.com/cdumqfg/5o6ofbfzf/white_brick_wall__2x.png" title="White Brick Wall"/>
+        <meta name="select:Background Pattern Style" content="" title="None"/>
+        
+        <meta name="select:Layout Type" content=" col-xs-12 col-sm-6 col-md-6 col-sm-offset-3 col-md-offset-3 " title="1 Column">
+        <meta name="select:Layout Type" content=" col-xs-12 col-sm-6 col-md-6 " title="2 Column">
+        <meta name="select:Layout Type" content=" col-xs-12 col-sm-4 col-md-4 " title="3 Column">
+        <meta name="select:Layout Type" content=" col-xs-12 col-sm-3 col-md-3 " title="4 Column">
+        
+        <meta name="select:Caption Style" content="rightstyle" title="Right Style"/>
+        <meta name="select:Caption Style" content="leftstyle" title="Left Style"/>
+        <meta name="select:Caption Style" content="centerstyle" title="Center Style"/>
+        
+        <meta name="select:Like Reblog Style" content="likereblogright" title="Right style"/>
+        <meta name="select:Like Reblog Style" content="likereblogleft" title="Left style"/>
+        <meta name="select:Like Reblog Style" content="likereblogcenter" title="Center style"/>
+        
+        <meta name="select:Text Post Style" content="textleft" title="Left Style"/>
+        <meta name="select:Text Post Style" content="textright" title="Right Style"/>
+        <meta name="select:Text Post Style" content="textjustify" title="Justify Style"/>
+        
+        <meta name="select:Text Post Size On Permalink Page" content="col-md-12 col-sm-12 col-xs-12" title="Full Width"/>
+        <meta name="select:Text Post Size On Permalink Page" content="col-md-6 col-sm-6 col-xs-12" title="Default"/>
+        
+        <meta name="select:Link Post List Text Style" content="postlistright" title="Right Style"/>
+        <meta name="select:Link Post List Text Style" content="postlistcenter" title="Center Style"/>
+        <meta name="select:Link Post List Text Style" content="postlistleft" title="Left Style"/>
+        
+        <meta name="select:Text Post Size" content="col-md-12 col-sm-12 col-xs-12" title="Size 1"/>
+        <meta name="select:Text Post Size" content="col-md-6 col-sm-6 col-xs-12" title="Size 2"/>
+        <meta name="select:Text Post Size" content="col-md-4 col-sm-4 col-xs-12" title="Size 3"/>
+        <meta name="select:Text Post Size" content="col-md-3 col-sm-3 col-xs-12" title="Size 4"/>
+        <meta name="select:Text Post Size" content="col-md-8 col-sm-8 col-xs-12" title="Size 5"/>
+        <meta name="select:Text Post Size" content="col-md-9 col-sm-9 col-xs-12" title="Size 6"/>
+        
+        <meta name="select:Video Size" content="250" title="Size 1"/>
+        <meta name="select:Video Size" content="400" title="Size 2"/>
+        <meta name="select:Video Size" content="500" title="Size 3"/>
+        <meta name="select:Video Size" content="700" title="Size 4"/>
+        
+        <meta name="if:Show Avatar" content="1"/>
+        <meta name="if:Show Total Pages" content="1"/>
+        <meta name="if:Thumbnail On Link Post" content="1"/>
+        <meta name="if:Show Caption Under Post" content="1"/>
+        <meta name="if:Chose Text Post Size" content="1"/>
+        
+        <meta name="color:Font Color" content="#FFFFFF"/>
+        <meta name="color:Background color" content="#f57992"/>
+        <meta name="color:Background border color" content=""/>
+        <meta name="color:URLs Color" content="#ff0000"/>
+        <meta name="color:Background Title Post" content="#223282"/>
+        <meta name="color:Navigation Menu Color" content="#000000"/>
+        <meta name="color:Chat color 1" content="#f57992"/>
+        <meta name="color:Chat color 2" content="#f57992"/>
+        {/block:hidden}
     
-    body{
-        background: url('{select:Background Pattern Style}') repeat {color:Background color};
-    }
+    <style>
+        *{
+            color: {color:Font Color};
+        }
+        
+        body a,a:hover{
+            color: {color:URLs Color};
+        }
+        
+        body{
+            background: url('{select:Background Pattern Style}') repeat {color:Background color};
+        }
+        
+        .bg{
+            background: url({HeaderImage}) no-repeat;
+            background-size: cover;
+            background-position: 50% 15%;
+            height: 250px;
+        }
     
-    .bg{
-        background: url({HeaderImage}) no-repeat;
-        background-size: cover;
-        background-position: 50% 15%;
-        height: 200px;
-    }
-
-    .usrimgtitledescription ul li{
-        list-style: none;
-        text-align: center;
-    }
+        .usrimgtitledescription ul li{
+            list-style: none;
+            text-align: center;
+        }
+        
+        .usrimgtitledescription ul li img{
+            margin-top: -70px;
+            border-radius: 20px;
+        }
+        
+        .affix{
+            width: 100%;
+            top: -10px;
+            z-index: 1;
+            background: url('{select:Background Pattern Style}') repeat {color:Background color};
+            border-bottom: 1px solid black;
+            height: 50px;
+        }
     
-    .usrimgtitledescription ul li img{
-        margin-top: -70px;
-        border-radius: 20px;
-    }
+        .affix a i, .affix-top a i{
+            margin-top: 20px;
+            font-size: 25px;
+        }
+        
+        .containernav{
+            height: 60px;
+            padding: 0;
+        }
+        
+        .containernav ul{
+            text-align: center;
+        }
+        
+        .containernav ul li{
+            margin-right: 30px;
+            list-style: none;
+            display: inline-block;
+        }
+        
+        .containernav ul li a{
+            text-decoration: none;
+            font-size: 15px;
+        }
+        
+        .containernav ul li a i{
+            font-size: 20px;
+        }
+        
+        .footercontainer ul{
+            list-style: none;
+            text-align: center;
+        }
+        
+        .footercontainer ul li{
+            display: inline;
+            margin-right: 10px;
+        }
+        
+        .navbar-nav{
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .navcolor ul li a{
+            color: {color:Navigation Menu Color};
+        }
+        
+        .grid:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        
+        .grid-item {
+            float: left;
+            margin-bottom: 10px;
+        }
+        
+        .bgborder{
+            background-color: {color:Background border color};
+            padding-top: 10px;
+            padding-bottom: 1px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px 0;
+            margin-bottom: 15px;
+        }
+        
+        .jfpp{
+            padding-bottom: 10px;
+        }
+        
+        .jftpp{
+            padding: 0;
+        }
+        
+        .captionpp{
+            background: {color:Background border color};
+            padding-top: 10px;
+            padding-bottom: 5px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px 0;
+        }
+        
+        .notespp, .commentpp{
+            margin-top: 15px;
+        }
+        
+        .notespp{
+            height: 300px;
+        }
+        
+        .insidenotes{
+            width: 100%;
+            height: 99%;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+        
+        .insidenotes .notes li a img{
+            width: 64px;
+            height: 64px;
+        }
+        
+        .insidenotes, .cinsidenotes{
+            padding: 0;
+        }
+        
+        .cinsidenotes{
+            height: 250px;
+        }
+        
+        .inside-itempp{
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        .inside-itempp .postimgs{
+            width: 100%;
+        }
+        
+        .inside-item{
+            width: 95%;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        .inside-item .postimgs{
+            width: 100%;
+        }
+        
+        .likereblogpp ul{
+            text-align: center;
+        }
+        
+        .likereblogpp ul li{
+            list-style: none;
+            margin-right: 10px;
+            display: inline-block;
+        }
+        
+        .likereblog{
+            height: 20px;
+            margin: 5px 0;
+        }
+        
+        .likereblog ul li{
+            list-style: none;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        
+        .likereblogcenter ul{
+            text-align: center;
+            padding: 0;
+        }
+        
+        .likereblogright ul{
+            text-align: right;
+            padding: 0;
+        }
+        
+        .likereblogleft ul{
+            text-align: left;
+            padding: 0;
+            margin-left: 10px;
+        }
+        
+        .centerstyle{
+            text-align: center;
+        }
+        
+        .leftstyle{
+            text-align: left;
+            margin-left: 10px;
+        }
+        
+        .rightstyle{
+            text-align: right;
+            margin-right: 10px;
+        }
+        
+        .photoset-grid{
+            margin: 0 auto;
+        }
+        
+        .custom-like-button {
+            position: relative;
+            display: block;
+            cursor: pointer;
+        }
     
-    .affix{
-        width: 100%;
-        top: -10px;
-        z-index: 1;
-        background: url('{select:Background Pattern Style}') repeat {color:Background color};
-        border-bottom: 1px solid black;
-        height: 50px;
-    }
-
-    .affix a i, .affix-top a i{
-        margin-top: 20px;
-        font-size: 25px;
-    }
+        .like_button {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            z-index: 10;
+        }
+        
+        .like_button iframe {
+            width: 100% !important;
+            height: 100% !important;
+        }
+        
+        .textleft p{
+            text-align: left;
+        }
+        
+        .textright p{
+            text-align: right;
+        }
+        
+        .textjustify p{
+            text-align: justify;
+        }
+        
+        .source{
+            text-align: right;
+        }
+        
+        .linkpost{
+            margin-right: 0;
+            margin-left: 0;
+            width: 100%;
+        }
+        
+        .barlink{
+            background-color: {color:Background Title Post};
+            width: auto;
+        }
+        
+        .barlink ul{
+            list-style: none;
+            padding: 0;
+        }
+        
+        .barlink ul li:first-child{
+            width: 95%;
+            margin: 0 auto;
+        }
+        
+        .postlistright{
+            text-align: right;
+            margin-right: 10px;
+        }
+        
+        .postlistcenter{
+            text-align: center;
+        }
+        
+        .postlistleft{
+            text-align: left;
+            margin-left: 10px;
+        }
+        
+        .descriptionlink{
+            margin-right: 5%;
+            margin-left: 5%;
+            text-align: justify;
+        }
+        
+        .col-xs-12.col-sm-4.col-md-4 .bgborder .iframesize iframe{
+            width: 100%;
+            height: 250px;
+        }
+        
+        .col-xs-12.col-sm-6.col-md-6 .bgborder .iframesize iframe{
+            width: 100%;
+            height: 320px;
+        }
+        
+        .col-xs-12.col-sm-3.col-md-3 .bgborder .iframesize iframe{
+            width: 100%;
+            height: 200px;
+        }
+        
+        .jfpp .iframesize iframe{
+            width: 100%;
+        }
+        
+        .inside-itempp.iframesize iframe{
+            height: 280px;
+        }
+        
+        .iframesizepp iframe{
+            width: 100%;
+            height: 350px;
+        }
+        
+        .themeby{
+            font-size: 10px;
+            margin-left: 5px;
+        }
+        
+        .askerp{
+            height: 64px;
+            width: 64px;
+        }
+        
+        .testing p{
+            display: inline-block;
+        }
+        
+        ul.ulchat{
+            list-style: none;
+            padding: 0;
+        }
+        
+        .ulchat .user_1{
+            background-color: {color:Chat color 1};
+            margin-bottom: 5px;
+        }
+        
+        .ulchat .user_2{
+            background-color: {color:Chat color 2};
+            margin-bottom: 5px;
+        }
+        
+        {CustomCSS}
+    </style>
     
-    .containernav{
-        height: 60px;
-        padding: 0;
-    }
-    
-    .containernav ul{
-        text-align: center;
-    }
-    
-    .containernav ul li{
-        margin-right: 30px;
-        list-style: none;
-        display: inline-block;
-    }
-    
-    .containernav ul li a{
-        text-decoration: none;
-        font-size: 15px;
-    }
-    
-    .containernav ul li a i{
-        font-size: 20px;
-    }
-    
-    .footercontainer ul{
-        list-style: none;
-        text-align: center;
-    }
-    
-    .footercontainer ul li{
-        display: inline;
-        margin-right: 10px;
-    }
-    
-    .navbar-nav{
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-    
-    .navcolor ul li a{
-        color: {color:Navigation Menu Color};
-    }
-    
-    .grid:after {
-        content: '';
-        display: block;
-        clear: both;
-    }
-    
-    .grid-item {
-        float: left;
-        margin-bottom: 10px;
-    }
-    
-    .bgborder{
-        background-color: {color:Background border color};
-        padding-top: 10px;
-        padding-bottom: 1px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px 0;
-        margin-bottom: 15px;
-    }
-    
-    .jfpp{
-        padding-bottom: 10px;
-    }
-    
-    .captionpp{
-        background: {color:Background border color};
-        padding-top: 10px;
-        padding-bottom: 5px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px 0;
-    }
-    
-    .notespp, .commentpp{
-        margin-top: 15px;
-    }
-    
-    .notespp{
-        height: 300px;
-    }
-    
-    .insidenotes{
-        width: 100%;
-        height: 99%;
-        overflow-y: scroll;
-        overflow-x: hidden;
-    }
-    
-    .insidenotes .notes li a img{
-        width: 64px;
-        height: 64px;
-    }
-    
-    .insidenotes, .cinsidenotes{
-        padding: 0;
-    }
-    
-    .cinsidenotes{
-        height: 250px;
-    }
-    
-    .inside-itempp{
-        width: 100%;
-        display: block;
-        margin: 0 auto;
-    }
-    
-    .inside-itempp img{
-        width: 100%;
-    }
-    
-    .inside-item{
-        width: 95%;
-        display: block;
-        margin: 0 auto;
-    }
-    
-    .inside-item img{
-        width: 100%;
-    }
-    
-    .likereblogpp ul{
-        text-align: center;
-    }
-    
-    .likereblogpp ul li{
-        list-style: none;
-        margin-right: 10px;
-        display: inline-block;
-    }
-    
-    .likereblog{
-        height: 20px;
-        margin: 5px 0;
-    }
-    
-    .likereblog ul li{
-        list-style: none;
-        display: inline-block;
-        margin-right: 10px;
-    }
-    
-    .likereblogcenter ul{
-        text-align: center;
-        padding: 0;
-    }
-    
-    .likereblogright ul{
-        text-align: right;
-        padding: 0;
-    }
-    
-    .likereblogleft ul{
-        text-align: left;
-        padding: 0;
-        margin-left: 10px;
-    }
-    
-    .centerstyle{
-        text-align: center;
-    }
-    
-    .leftstyle{
-        text-align: left;
-        margin-left: 10px;
-    }
-    
-    .rightstyle{
-        text-align: right;
-        margin-right: 10px;
-    }
-    
-    .photoset-grid{
-        margin: 0 auto;
-    }
-    
-    .custom-like-button {
-        position: relative;
-        display: block;
-        cursor: pointer;
-    }
-
-    .like_button {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        z-index: 10;
-    }
-    
-    .like_button iframe {
-        width: 100% !important;
-        height: 100% !important;
-    }
-    
-    .textleft p{
-        text-align: left;
-    }
-    
-    .textright p{
-        text-align: right;
-    }
-    
-    .textjustify p{
-        text-align: justify;
-    }
-    
-    .source{
-        text-align: right;
-    }
-    
-    .linkpost{
-        margin-right: 0;
-        margin-left: 0;
-        width: 100%;
-    }
-    
-    .barlink{
-        background-color: {color:Background Title Post};
-        width: auto;
-    }
-    
-    .barlink ul{
-        list-style: none;
-        padding: 0;
-    }
-    
-    .barlink ul li:first-child{
-        width: 95%;
-        margin: 0 auto;
-    }
-    
-    .postlistright{
-        text-align: right;
-        margin-right: 10px;
-    }
-    
-    .postlistcenter{
-        text-align: center;
-    }
-    
-    .postlistleft{
-        text-align: left;
-        margin-left: 10px;
-    }
-    
-    .descriptionlink{
-        margin-right: 5%;
-        margin-left: 5%;
-        text-align: justify;
-    }
-    
-    .themeby{
-        font-size: 10px;
-        margin-left: 5px;
-    }
-</style>
-
-    </head>
-    <body class="{block:IndexPage}index-page{/block:IndexPage}">
-        <header>
+        </head>
+        <body class="{block:IndexPage}index-page{/block:IndexPage}">
+            <header>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="headercontainer">
+                            <div class="bg"></div>
+                            <div class="usrimgtitledescription">
+                                <ul>
+                                    <li>{block:ifShowAvatar}<a href="{BlogURL}"><img src="{PortraitURL-128}" alt="imagen de perfil"></a>{/block:ifShowAvatar}</li>
+                                    <li><h1>{Title}</h1></li>
+                                    <li><h3>{Description}</h3></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <nav>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12 col-xs-12 containernav navcolor">
+                                <ul {block:IndexPage}data-spy="affix" data-offset-top="425"{/block:IndexPage}>
+                                    <li><a href="{BlogURL}"><i class="fa fa-home"></i> Home</a></li>
+                                    <li><a href="/archive"><i class="fa fa-archive"></i> Archive</a></li>
+                                    <li><a href="/ask"><i class="fa fa-question"></i> Ask me</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            
             <div class="container-fluid">
                 <div class="row">
-                    <div class="headercontainer">
-                        <div class="bg"></div>
-                        <div class="usrimgtitledescription">
-                            <ul>
-                                <li>{block:ifShowAvatar}<img src="{PortraitURL-128}" alt="imagen de perfil">{/block:ifShowAvatar}
-                                <li><h1>{Title}</h1>
-                                <li><h3>{Description}</h3></li>
+                    <div>
+                        <div class="grid">
+        {block:Posts}
+            
+            {block:Answer}
+                <div class="grid-item {PostType} {block:IndexPage}{block:ifNotChoseTextPostSize}{select:Layout Type}{/block:ifNotChoseTextPostSize} {block:ifChoseTextPostSize}{select:Text Post Size}{/block:ifChoseTextPostSize}{/block:IndexPage}{block:PermalinkPage}col-md-12 colwidthfix{/block:PermalinkPage}">
+                    <div class="bgborder {block:PermalinkPage}jftpp jfpp {select:Text Post Size On Permalink Page}{/block:PermalinkPage}">
+                        <div class="inside-item{block:PermalinkPage}pp{/block:PermalinkPage}">
+                                    <div class="question">
+                                        <img class="askerp" src="{AskerPortraitURL-64}">
+                                        {Question}
+                                    </div>
+                                    <div class="testing">
+                                        {Answer}
+                                    </div>
+                        </div>
+                        {block:IndexPage}
+                            <div class="likereblog {select:Like Reblog Style}">
+                                <ul>
+                                    <li>
+                                        <div class="custom-like-button">
+                                            {LikeButton}
+                                            <span class="out_toggle">
+                                                <i class="fa fa-heart fa-lg"></i>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li><a href="{ReblogURL}" target="_Blank"><i class="fa fa-share fa-lg"></i></a></li>
+                                    <li><a href="{Permalink}" target="_Blank">{NoteCountWithLabel}</a></li>
+                                </ul>
+                            </div>
+                            {block:ifShowCaptionUnderPost}
+                                {block:Caption}
+                                    <div class="caption {select:Caption Style}">
+                                        {Caption}
+                                    </div>
+                                {/block:Caption}
+                            {/block:ifShowCaptionUnderPost}
+                        {/block:IndexPage}
+                    </div>
+                    {block:PermalinkPage}
+                        <div class="{select:Text Post Size On Permalink Page}">
+                            <div class="captionpp col-md-12 col-sm-12">
+                                <div class="likereblogpp">
+                                    <ul>
+                                        <li><a href="{Permalink}" target="_Blank">{NoteCountWithLabel}</a></li>
+                                        <li><a href="{ReblogURL}" target="_Blank"><i class="fa fa-share fa-lg"></i></a></li>
+                                        <li>
+                                            <div class="custom-like-button">
+                                                {LikeButton}
+                                                <span class="out_toggle">
+                                                    <i class="fa fa-heart fa-lg"></i>
+                                                </span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="captionpp commentpp col-md-12 col-sm-12">
+                                {Caption}
+                            </div>
+                            <div class="captionpp notespp col-md-12 col-sm-12">
+                                <div class="insidenotes">
+                                    {block:PostNotes}
+                                        {PostNotes-64}
+                                    {/block:PostNotes}
+                                </div>
+                            </div>
+                        </div>
+                    {/block:PermalinkPage}
+                </div>
+            {/block:Answer}
+            
+            {block:Photo}
+                <div class="grid-item {PostType} colwidthfix {block:IndexPage}{select:Layout Type}{/block:IndexPage}{block:PermalinkPage}col-md-12{/block:PermalinkPage}">
+                    <div class="bgborder {block:PermalinkPage} jfpp col-md-6 col-xs-12 col-sm-6{/block:PermalinkPage}">
+                        <div class="inside-item{block:PermalinkPage}pp{/block:PermalinkPage}">
+                            {block:IndexPage}<a href="{PermaLink}" target="_Blank">{/block:IndexPage}<img class="postimgs" src="{PhotoURL-HighRes}">{block:IndexPage}</a>{/block:IndexPage}
+                        </div>
+                        {block:IndexPage}
+                            <div class="likereblog {select:Like Reblog Style}">
+                                <ul>
+                                    <li>
+                                        <div class="custom-like-button">
+                                            {LikeButton}
+                                            <span class="out_toggle">
+                                                <i class="fa fa-heart fa-lg"></i>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li><a href="{ReblogURL}" target="_Blank"><i class="fa fa-share fa-lg"></i></a></li>
+                                    <li><a href="{Permalink}" target="_Blank">{NoteCountWithLabel}</a></li>
+                                </ul>
+                            </div>
+                            {block:ifShowCaptionUnderPost}
+                                {block:Caption}
+                                    <div class="caption {select:Caption Style}">
+                                        {Caption}
+                                    </div>
+                                {/block:Caption}
+                            {/block:ifShowCaptionUnderPost}
+                        {/block:IndexPage}
+                    </div>
+                    
+                    {block:PermalinkPage}
+                        <div class="col-md-6 col-xs-12 col-sm-6">
+                            <div class="captionpp col-md-12 col-sm-12">
+                                <div class="likereblogpp">
+                                    <ul>
+                                        <li><a href="{Permalink}" target="_Blank">{NoteCountWithLabel}</a></li>
+                                        <li><a href="{ReblogURL}" target="_Blank"><i class="fa fa-share fa-lg"></i></a></li>
+                                        <li>
+                                            <div class="custom-like-button">
+                                                {LikeButton}
+                                                <span class="out_toggle">
+                                                    <i class="fa fa-heart fa-lg"></i>
+                                                </span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="captionpp commentpp col-md-12 col-sm-12">
+                                {Caption}
+                            </div>
+                            <div class="captionpp notespp col-md-12 col-sm-12">
+                                <div class="col-md-12 col-sm-12 cinsidenotes">
+                                    <div class="insidenotes col-md-12 col-sm-12">
+                                            {block:PostNotes}
+                                                {PostNotes-64}
+                                            {/block:PostNotes}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {/block:PermalinkPage}
+                </div>
+            {/block:Photo}
+        
+            {block:Photoset}
+                <div class="grid-item {PostType} {block:IndexPage}{select:Layout Type}{/block:IndexPage}{block:PermalinkPage}col-md-12 colwidthfix{/block:PermalinkPage}">
+                    <div class="bgborder {block:PermalinkPage} jfpp col-md-6 col-xs-12 col-sm-6{/block:PermalinkPage}">
+                        <div class="inside-item">
+                            <div class="photoset-grid" data-layout="{PhotosetLayout}">
+                                {block:Photos}
+                                    {block:IndexPage}<a href="{PermaLink}" target="_Blank">{/block:IndexPage}<img class="postimgs" src="{PhotoURL-HighRes}">{block:IndexPage}</a>{/block:IndexPage}
+                                {/block:Photos}
+                            </div>
+                        </div>
+                        
+                        {block:IndexPage}
+                            <div class="likereblog {select:Like Reblog Style}">
+                                <ul>
+                                    <li>
+                                        <div class="custom-like-button">
+                                            {LikeButton}
+                                            <span class="out_toggle">
+                                                <i class="fa fa-heart fa-lg"></i>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li><a href="{ReblogURL}" target="_Blank"><i class="fa fa-share fa-lg"></i></a></li>
+                                    <li><a href="{Permalink}" target="_Blank">{NoteCountWithLabel}</a></li>
+                                </ul>
+                            </div>
+                            {block:ifShowCaptionUnderPost}
+                                {block:Caption}
+                                    <div class="caption {select:Caption Style}">
+                                        {Caption}
+                                    </div>
+                                {/block:Caption}
+                            {/block:ifShowCaptionUnderPost}
+                        {/block:IndexPage}
+                    </div>
+                    
+                    {block:PermalinkPage}
+                        <div class="col-md-6 col-xs-12 col-sm-6">
+                            <div class="captionpp col-md-12 col-sm-12">
+                                <div class="likereblogpp">
+                                    <ul>
+                                        <li><a href="{Permalink}" target="_Blank">{NoteCountWithLabel}</a></li>
+                                        <li><a href="{ReblogURL}" target="_Blank"><i class="fa fa-share fa-lg"></i></a></li>
+                                        <li>
+                                            <div class="custom-like-button">
+                                                {LikeButton}
+                                                <span class="out_toggle">
+                                                    <i class="fa fa-heart fa-lg"></i>
+                                                </span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="captionpp commentpp col-md-12 col-sm-12">
+                                {Caption}
+                            </div>
+                            <div class="captionpp notespp col-md-12 col-sm-12">
+                                <div class="insidenotes">
+                                    {block:PostNotes}
+                                        {PostNotes-64}
+                                    {/block:PostNotes}
+                                </div>
+                            </div>
+                        </div>
+                    {/block:PermalinkPage}
+                </div>
+            {/block:Photoset}
+            
+            {block:Text}
+                <div class="grid-item {PostType} {block:IndexPage}{block:ifNotChoseTextPostSize}{select:Layout Type}{/block:ifNotChoseTextPostSize} {block:ifChoseTextPostSize}{select:Text Post Size}{/block:ifChoseTextPostSize}{/block:IndexPage}{block:PermalinkPage}col-md-12 colwidthfix{/block:PermalinkPage}">
+                    <div class="bgborder {block:PermalinkPage}jftpp jfpp {select:Text Post Size On Permalink Page}{/block:PermalinkPage}">
+                        <div class="inside-item{block:PermalinkPage}pp{/block:PermalinkPage} {select:Text Post Style}">
+                            {block:Title}
+                                <h3>{block:IndexPage}<a href="{Permalink}">{/block:IndexPage}{Title}{block:IndexPage}</a>{/block:IndexPage}</h3>
+                            {/block:Title}
+                                {Body}
+                        </div>
+                        {block:IndexPage}
+                            <div class="likereblog {select:Like Reblog Style}">
+                                <ul>
+                                    <li>
+                                        <div class="custom-like-button">
+                                            {LikeButton}
+                                            <span class="out_toggle">
+                                                <i class="fa fa-heart fa-lg"></i>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li><a href="{ReblogURL}" target="_Blank"><i class="fa fa-share fa-lg"></i></a></li>
+                                    <li><a href="{Permalink}" target="_Blank">{NoteCountWithLabel}</a></li>
+                                </ul>
+                            </div>
+                            {block:ifShowCaptionUnderPost}
+                                {block:Caption}
+                                    <div class="caption {select:Caption Style}">
+                                        {Caption}
+                                    </div>
+                                {/block:Caption}
+                            {/block:ifShowCaptionUnderPost}
+                        {/block:IndexPage}
+                    </div>
+                    {block:PermalinkPage}
+                        <div class="{select:Text Post Size On Permalink Page}">
+                            <div class="captionpp col-md-12 col-sm-12">
+                                <div class="likereblogpp">
+                                    <ul>
+                                        <li><a href="{Permalink}" target="_Blank">{NoteCountWithLabel}</a></li>
+                                        <li><a href="{ReblogURL}" target="_Blank"><i class="fa fa-share fa-lg"></i></a></li>
+                                        <li>
+                                            <div class="custom-like-button">
+                                                {LikeButton}
+                                                <span class="out_toggle">
+                                                    <i class="fa fa-heart fa-lg"></i>
+                                                </span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="captionpp commentpp col-md-12 col-sm-12">
+                                {Caption}
+                            </div>
+                            <div class="captionpp notespp col-md-12 col-sm-12">
+                                <div class="insidenotes">
+                                    {block:PostNotes}
+                                        {PostNotes-64}
+                                    {/block:PostNotes}
+                                </div>
+                            </div>
+                        </div>
+                    {/block:PermalinkPage}
+                </div>
+            {/block:Text}
+            
+            {block:Quote}
+                <div class="grid-item {PostType} {block:IndexPage}{block:ifNotChoseTextPostSize}{select:Layout Type}{/block:ifNotChoseTextPostSize} {block:ifChoseTextPostSize}{select:Text Post Size}{/block:ifChoseTextPostSize}{/block:IndexPage}{block:PermalinkPage}col-md-12 colwidthfix{/block:PermalinkPage}">
+                    <div class="bgborder {block:PermalinkPage}jfpp {select:Text Post Size On Permalink Page}{/block:PermalinkPage}">
+                        <div class="inside-item{block:PermalinkPage}pp{/block:PermalinkPage} {select:Text Post Style}">
+                            <h2>"{Quote}"</h2>
+                            {block:Source}
+                                <div class="source">
+                                    —{block:IndexPage}<a href="{Permalink}" target="_Blank">{/block:IndexPage}{Source}{block:IndexPage}</a>{/block:IndexPage}
+                                </div>
+                            {/block:Source}
+                        </div>
+                        {block:IndexPage}
+                            <div class="likereblog {select:Like Reblog Style}">
+                                <ul>
+                                    <li>
+                                        <div class="custom-like-button">
+                                            {LikeButton}
+                                            <span class="out_toggle">
+                                                <i class="fa fa-heart fa-lg"></i>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li><a href="{ReblogURL}" target="_Blank"><i class="fa fa-share fa-lg"></i></a></li>
+                                    <li><a href="{Permalink}" target="_Blank">{NoteCountWithLabel}</a></li>
+                                </ul>
+                            </div>
+                            {block:ifShowCaptionUnderPost}
+                                {block:Caption}
+                                    <div class="caption {select:Caption Style}">
+                                        {Caption}
+                                    </div>
+                                {/block:Caption}
+                            {/block:ifShowCaptionUnderPost}
+                        {/block:IndexPage}
+                    </div>
+                    
+                    {block:PermalinkPage}
+                        <div class="{select:Text Post Size On Permalink Page}">
+                            <div class="captionpp col-md-12 col-sm-12">
+                                <div class="likereblogpp">
+                                    <ul>
+                                        <li><a href="{Permalink}" target="_Blank">{NoteCountWithLabel}</a></li>
+                                        <li><a href="{ReblogURL}" target="_Blank"><i class="fa fa-share fa-lg"></i></a></li>
+                                        <li>
+                                            <div class="custom-like-button">
+                                                {LikeButton}
+                                                <span class="out_toggle">
+                                                    <i class="fa fa-heart fa-lg"></i>
+                                                </span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="captionpp commentpp col-md-12 col-sm-12">
+                                {Caption}
+                            </div>
+                            <div class="captionpp notespp col-md-12 col-sm-12">
+                                <div class="insidenotes">
+                                    {block:PostNotes}
+                                        {PostNotes-64}
+                                    {/block:PostNotes}
+                                </div>
+                            </div>
+                        </div>
+                    {/block:PermalinkPage}
+                </div>
+            {/block:Quote}
+            
+            {block:Link}
+                <div class="grid-item {PostType} {block:IndexPage}{block:ifNotChoseTextPostSize}{select:Layout Type}{/block:ifNotChoseTextPostSize} {block:ifChoseTextPostSize}{select:Text Post Size}{/block:ifChoseTextPostSize}{/block:IndexPage}{block:PermalinkPage}col-md-12 colwidthfix{/block:PermalinkPage}">
+                    <div class="bgborder {block:PermalinkPage}jftpp jfpp col-md-6 col-xs-12 col-sm-6{/block:PermalinkPage}">
+                        <div class="inside-item{block:PermalinkPage}pp{/block:PermalinkPage} linkpost">
+                                <div class="barlink">
+                                    <ul>
+                                        {block:ifThumbnailOnLinkPost}<li>
+                                            {block:Thumbnail}
+                                                <img src="{Thumbnail}" alt="{Name}">
+                                            {/block:Thumbnail}
+                                        </li>{/block:ifThumbnailOnLinkPost}
+                                        <li class="{select:Link Post List Text Style}"><h1><a href="{URL}" class="link" {Target}>{Name}</a></h1></li>
+                                        <li class="{select:Link Post List Text Style}">
+                                            {block:Excerpt}
+                                                {Excerpt}
+                                            {/block:Excerpt}
+                                        </li>
+                                        <li class="{select:Link Post List Text Style}">
+                                            {block:Host}
+                                                {Host}
+                                            {/block:Host}
+                                        </li>
+                                    </ul>
+                                </div>
+                                {block:Description}
+                                    <div class="descriptionlink">{Description}</div>
+                                {/block:Description}
+                        </div>
+                        {block:IndexPage}
+                            <div class="likereblog {select:Like Reblog Style}">
+                                <ul>
+                                    <li>
+                                        <div class="custom-like-button">
+                                            {LikeButton}
+                                            <span class="out_toggle">
+                                                <i class="fa fa-heart fa-lg"></i>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li><a href="{ReblogURL}" target="_Blank"><i class="fa fa-share fa-lg"></i></a></li>
+                                    <li><a href="{Permalink}" target="_Blank">{NoteCountWithLabel}</a></li>
+                                </ul>
+                            </div>
+                            {block:ifShowCaptionUnderPost}
+                                {block:Caption}
+                                    <div class="caption {select:Caption Style}">
+                                        {Caption}
+                                    </div>
+                                {/block:Caption}
+                            {/block:ifShowCaptionUnderPost}
+                        {/block:IndexPage}
+                    </div>
+                    {block:PermalinkPage}
+                        <div class="col-md-6 col-xs-12 col-sm-6">
+                            <div class="captionpp col-md-12 col-sm-12">
+                                <div class="likereblogpp">
+                                    <ul>
+                                        <li><a href="{Permalink}" target="_Blank">{NoteCountWithLabel}</a></li>
+                                        <li><a href="{ReblogURL}" target="_Blank"><i class="fa fa-share fa-lg"></i></a></li>
+                                        <li>
+                                            <div class="custom-like-button">
+                                                {LikeButton}
+                                                <span class="out_toggle">
+                                                    <i class="fa fa-heart fa-lg"></i>
+                                                </span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="captionpp commentpp col-md-12 col-sm-12">
+                                {Caption}
+                            </div>
+                            <div class="captionpp notespp col-md-12 col-sm-12">
+                                <div class="col-md-12 col-sm-12 cinsidenotes">
+                                    <div class="insidenotes col-md-12 col-sm-12">
+                                            {block:PostNotes}
+                                                {PostNotes-64}
+                                            {/block:PostNotes}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {/block:PermalinkPage}
+                </div>
+            {/block:Link}
+            
+            {block:Panorama}
+                <div class="grid-item {PostType} {block:IndexPage}{select:Layout Type}{/block:IndexPage}{block:PermalinkPage}col-md-12 colwidthfix{/block:PermalinkPage}">
+                    <div class="bgborder {block:PermalinkPage} jfpp col-md-6 col-xs-12 col-sm-6{/block:PermalinkPage}">
+                        <div class="inside-item{block:PermalinkPage}pp{/block:PermalinkPage}">
+                        <p>Panorama test</p>
+                            {LinkOpenTag}
+                                <img class="postimgs" src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>
+                            {LinkCloseTag}
+                        </div>
+                        {block:IndexPage}
+                            <div class="likereblog {select:Like Reblog Style}">
+                                <ul>
+                                    <li>
+                                        <div class="custom-like-button">
+                                            {LikeButton}
+                                            <span class="out_toggle">
+                                                <i class="fa fa-heart fa-lg test"></i>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li><a href="{ReblogURL}" target="_Blank"><i class="fa fa-share fa-lg"></i></a></li>
+                                    <li><a href="{Permalink}" target="_Blank">{NoteCountWithLabel}</a></li>
+                                </ul>
+                            </div>
+                            {block:ifShowCaptionUnderPost}
+                                {block:Caption}
+                                    <div class="caption {select:Caption Style}">
+                                        {Caption}
+                                    </div>
+                                {/block:Caption}
+                            {/block:ifShowCaptionUnderPost}
+                        {/block:IndexPage}
+                    </div>
+                    {block:PermalinkPage}
+                        <div class="col-md-6 col-xs-12 col-sm-6">
+                            <div class="captionpp col-md-12 col-sm-12">
+                                <div class="likereblogpp">
+                                    <ul>
+                                        <li><a href="{Permalink}" target="_Blank">{NoteCountWithLabel}</a></li>
+                                        <li><a href="{ReblogURL}" target="_Blank"><i class="fa fa-share fa-lg"></i></a></li>
+                                        <li>
+                                            <div class="custom-like-button">
+                                                {LikeButton}
+                                                <span class="out_toggle">
+                                                    <i class="fa fa-heart fa-lg"></i>
+                                                </span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="captionpp commentpp col-md-12 col-sm-12">
+                                {Caption}
+                            </div>
+                            <div class="captionpp notespp col-md-12 col-sm-12">
+                                <div class="col-md-12 col-sm-12 cinsidenotes">
+                                    <div class="insidenotes col-md-12 col-sm-12">
+                                            {block:PostNotes}
+                                                {PostNotes-64}
+                                            {/block:PostNotes}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {/block:PermalinkPage}
+                </div>
+            {/block:Panorama}
+                        
+            {block:Chat}
+                <div class="grid-item {PostType} {block:IndexPage}{block:ifNotChoseTextPostSize}{select:Layout Type}{block:ifNotChoseTextPostSize}{block:ifChoseTextPostSize}{select:Text Post Size}{/block:ifChoseTextPostSize}{/block:IndexPage}{block:PermalinkPage}col-md-12{/block:PermalinkPage}">
+                    <div class="bgborder {block:PermalinkPage} jfpp col-md-6 col-xs-12 col-sm-6{/block:PermalinkPage}">
+                        <div class="inside-item{block:PermalinkPage}pp{/block:PermalinkPage}">
+                            {block:Title}
+                                <h3 class="chattitle">{Title}</h3>
+                            {/block:Title}
+                            
+                            <ul class="ulchat">
+                                {block:Lines}
+                                    <li class="{Alt} user_{UserNumber}">
+                                        {block:Label}
+                                            <span class="label">{Label}</span>
+                                        {/block:Label}{Line}
+                                    </li>
+                                {/block:Lines}
                             </ul>
+                        </div>
+                            {block:IndexPage}
+                                <div class="likereblog {select:Like Reblog Style}">
+                                    <ul>
+                                        <li>
+                                            <div class="custom-like-button">
+                                                {LikeButton}
+                                                <span class="out_toggle">
+                                                    <i class="fa fa-heart fa-lg"></i>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li><a href="{ReblogURL}" target="_Blank"><i class="fa fa-share fa-lg"></i></a></li>
+                                        <li><a href="{Permalink}" target="_Blank">{NoteCountWithLabel}</a></li>
+                                    </ul>
+                                </div>
+                                {block:ifShowCaptionUnderPost}
+                                    {block:Caption}
+                                        <div class="caption {select:Caption Style}">
+                                            {Caption}
+                                        </div>
+                                    {/block:Caption}
+                                {/block:ifShowCaptionUnderPost}
+                            {/block:IndexPage}
+                    </div>
+                    {block:PermalinkPage}
+                        <div class="col-md-6 col-xs-12 col-sm-6">
+                            <div class="captionpp col-md-12 col-sm-12">
+                                <div class="likereblogpp">
+                                    <ul>
+                                        <li><a href="{Permalink}" target="_Blank">{NoteCountWithLabel}</a></li>
+                                        <li><a href="{ReblogURL}" target="_Blank"><i class="fa fa-share fa-lg"></i></a></li>
+                                        <li>
+                                            <div class="custom-like-button">
+                                                {LikeButton}
+                                                <span class="out_toggle">
+                                                    <i class="fa fa-heart fa-lg"></i>
+                                                </span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="captionpp commentpp col-md-12 col-sm-12">
+                                {Caption}
+                            </div>
+                            <div class="captionpp notespp col-md-12 col-sm-12">
+                                <div class="col-md-12 col-sm-12 cinsidenotes">
+                                    <div class="insidenotes col-md-12 col-sm-12">
+                                            {block:PostNotes}
+                                                {PostNotes-64}
+                                            {/block:PostNotes}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {/block:PermalinkPage}
+                </div>
+            {/block:Chat}
+    
+            {block:Video}
+                <div class="grid-item {PostType} {block:IndexPage}{select:Layout Type}{/block:IndexPage}{block:PermalinkPage}col-md-12 colwidthfix{/block:PermalinkPage}">
+                    <div class="bgborder {block:PermalinkPage} jfpp col-md-6 col-xs-12 col-sm-6{/block:PermalinkPage}">
+                        <div class="inside-item{block:PermalinkPage}pp{/block:PermalinkPage} iframesize{block:PermalinkPage}pp{/block:PermalinkPage}">
+                            {Video-250}
+                        </div>
+                        {block:IndexPage}
+                            <div class="likereblog {select:Like Reblog Style}">
+                                <ul>
+                                    <li>
+                                        <div class="custom-like-button">
+                                            {LikeButton}
+                                            <span class="out_toggle">
+                                                <i class="fa fa-heart fa-lg"></i>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li><a href="{ReblogURL}" target="_Blank"><i class="fa fa-share fa-lg"></i></a></li>
+                                    <li><a href="{Permalink}" target="_Blank">{NoteCountWithLabel}</a></li>
+                                </ul>
+                            </div>
+                            {block:ifShowCaptionUnderPost}
+                                {block:Caption}
+                                    <div class="caption {select:Caption Style}">
+                                        {Caption}
+                                    </div>
+                                {/block:Caption}
+                            {/block:ifShowCaptionUnderPost}
+                        {/block:IndexPage}
+                    </div>
+                    {block:PermalinkPage}
+                        <div class="col-md-6 col-xs-12 col-sm-6">
+                            <div class="captionpp col-md-12 col-sm-12">
+                                <div class="likereblogpp">
+                                    <ul>
+                                        <li><a href="{Permalink}" target="_Blank">{NoteCountWithLabel}</a></li>
+                                        <li><a href="{ReblogURL}" target="_Blank"><i class="fa fa-share fa-lg"></i></a></li>
+                                        <li>
+                                            <div class="custom-like-button">
+                                                {LikeButton}
+                                                <span class="out_toggle">
+                                                    <i class="fa fa-heart fa-lg"></i>
+                                                </span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="captionpp commentpp col-md-12 col-sm-12">
+                                {Caption}
+                            </div>
+                            <div class="captionpp notespp col-md-12 col-sm-12">
+                                <div class="col-md-12 col-sm-12 cinsidenotes">
+                                    <div class="insidenotes col-md-12 col-sm-12">
+                                            {block:PostNotes}
+                                                {PostNotes-64}
+                                            {/block:PostNotes}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {/block:PermalinkPage}
+                </div>
+            {/block:Video}
+            
+            {block:Audio}
+                <div class="grid-item {PostType} colwidthfix {block:IndexPage}{select:Layout Type}{/block:IndexPage}{block:PermalinkPage} col-md-12 {/block:PermalinkPage}">
+                    <div class="bgborder {block:PermalinkPage} jfpp col-md-6 col-xs-12 col-sm-6 {/block:Permalinkpage}">
+                        <div class="inside-item{block:PermalinkPage}pp{/block:PermalinkPage} iframesize">
+                            {AudioEmbed}
+                        </div>
+                        {block:IndexPage}
+                            <div class="likereblog {select:Like Reblog Style}">
+                                <ul>
+                                    <li>
+                                        <div class="custom-like-button">
+                                            {LikeButton}
+                                            <span class="out_toggle">
+                                                <i class="fa fa-heart fa-lg"></i>
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li><a href="{ReblogURL}" target="_Blank"><i class="fa fa-share fa-lg"></i></a></li>
+                                    <li><a href="{Permalink}" target="_Blank">{NoteCountWithLabel}</a></li>
+                                </ul>
+                            </div>
+                            {block:ifShowCaptionUnderPost}
+                                {block:Caption}
+                                    <div class="caption {select:Caption Style}">
+                                        {Caption}
+                                    </div>
+                                {/block:Caption}
+                            {/block:ifShowCaptionUnderPost}
+                        {/block:IndexPage}
+                    </div>
+                    
+                    {block:PermalinkPage}
+                        <div class="col-md-6 col-xs-12 col-sm-6">
+                            <div class="captionpp col-md-12 col-sm-12">
+                                <div class="likereblogpp">
+                                    <ul>
+                                        <li><a href="{Permalink}" target="_Blank">{NoteCountWithLabel}</a></li>
+                                        <li><a href="{ReblogURL}" target="_Blank"><i class="fa fa-share fa-lg"></i></a></li>
+                                        <li>
+                                            <div class="custom-like-button">
+                                                {LikeButton}
+                                                <span class="out_toggle">
+                                                    <i class="fa fa-heart fa-lg"></i>
+                                                </span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="captionpp commentpp col-md-12 col-sm-12">
+                                {Caption}
+                            </div>
+                            <div class="captionpp notespp col-md-12 col-sm-12">
+                                <div class="col-md-12 col-sm-12 cinsidenotes">
+                                    <div class="insidenotes col-md-12 col-sm-12">
+                                            {block:PostNotes}
+                                                {PostNotes-64}
+                                            {/block:PostNotes}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {/block:PermalinkPage}
+                </div>
+            {/block:Audio}
+            
+        {/block:Posts}
                         </div>
                     </div>
                 </div>
             </div>
             
-            <nav>
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-12 col-xs-12 containernav navcolor">
-                            <ul data-spy="affix" data-offset-top="370">
-                                <li><a href="{BlogURL}"><i class="fa fa-home"></i> Home</a></li>
-                                <li><a href="/archive"><i class="fa fa-archive"></i> Archive</a></li>
-                                <li><a href="/ask"><i class="fa fa-question"></i> Ask me</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </nav>  
-        </header>
-
-        
+            
+    <footer>
         <div class="container-fluid">
             <div class="row">
-                <div>
-                    <div class="grid">
-                        {block:Posts}
-    
-                            {block:Photo}
-                                <div class="grid-item {block:IndexPage}{select:Layout Type}{/block:IndexPage}{block:PermalinkPage}col-md-12{/block:PermalinkPage}">
-                                    <div class="bgborder {block:PermalinkPage} jfpp col-md-6 col-xs-12 col-sm-6{/block:PermalinkPage}">
-                                        <div class="inside-item{block:PermalinkPage}pp{/block:PermalinkPage}">
-                                            {block:IndexPage}<a href="{PermaLink}" target="_Blank">{/block:IndexPage}<img src="{PhotoURL-HighRes}">{block:IndexPage}</a>{/block:IndexPage}
-                                        </div>
-                                        {block:IndexPage}
-                                            <div class="likereblog {select:Like Reblog Style}">
-                                                <ul>
-                                                    <li>
-                                                        <div class="custom-like-button">
-                                                            {LikeButton}
-                                                            <span class="out_toggle">
-                                                                <i class="fa fa-heart fa-lg test"></i>
-                                                            </span>
-                                                        </div>
-                                                    </li>
-                                                    <li><a href="{ReblogURL}" target="_Blank"><i class="fa fa-share fa-lg"></i></a></li>
-                                                    <li><a href="{Permalink}" target="_Blank">{NoteCountWithLabel}</a></li>
-                                                </ul>
-                                            </div>
-                                            {block:ifShowCaptionUnderPost}
-                                                {block:Caption}
-                                                    <div class="caption {select:Caption Style}">
-                                                        {Caption}
-                                                    </div>
-                                                {/block:Caption}
-                                            {/block:ifShowCaptionUnderPost}
-                                        {/block:IndexPage}
-                                    </div>
-                                    
-                                    {block:PermalinkPage}
-                                        <div class="col-md-6 col-xs-12 col-sm-6">
-                                            <div class="captionpp col-md-12 col-sm-12">
-                                                <div class="likereblogpp">
-                                                    <ul>
-                                                        <li><a href="{Permalink}" target="_Blank">{NoteCountWithLabel}</a></li>
-                                                        <li><a href="{ReblogURL}" target="_Blank"><i class="fa fa-share fa-lg"></i></a></li>
-                                                        <li>
-                                                            <div class="custom-like-button">
-                                                                {LikeButton}
-                                                                <span class="out_toggle">
-                                                                    <i class="fa fa-heart fa-lg"></i>
-                                                                </span>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="captionpp commentpp col-md-12 col-sm-12">
-                                                {Caption}
-                                            </div>
-                                            <div class="captionpp notespp col-md-12 col-sm-12">
-                                                <div class="col-md-12 col-sm-12 cinsidenotes">
-                                                    <div class="insidenotes col-md-12 col-sm-12">
-                                                            {block:PostNotes}
-                                                                {PostNotes-64}
-                                                            {/block:PostNotes}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    {/block:PermalinkPage}
-                                </div>
-                            {/block:Photo}
-                        
-                            {block:Photoset}
-                                <div class="grid-item {block:IndexPage}{select:Layout Type}{/block:IndexPage}{block:PermalinkPage}col-md-12{/block:PermalinkPage}">
-                                    <div class="bgborder {block:PermalinkPage} jfpp col-md-6 col-xs-12 col-sm-6{/block:PermalinkPage}">
-                                        <div class="inside-item">
-                                            <div class="photoset-grid" data-layout="{PhotosetLayout}">
-                                                {block:Photos}
-                                                    {block:IndexPage}<a href="{PermaLink}" target="_Blank">{/block:IndexPage}<img src="{PhotoURL-HighRes}">{block:IndexPage}</a>{/block:IndexPage}
-                                                {/block:Photos}
-                                            </div>
-                                        </div>
-                                        
-                                        {block:IndexPage}
-                                            <div class="likereblog {select:Like Reblog Style}">
-                                                <ul>
-                                                    <li>
-                                                        <div class="custom-like-button">
-                                                            {LikeButton}
-                                                            <span class="out_toggle">
-                                                                <i class="fa fa-heart fa-lg"></i>
-                                                            </span>
-                                                        </div>
-                                                    </li>
-                                                    <li><a href="{ReblogURL}" target="_Blank"><i class="fa fa-share fa-lg"></i></a></li>
-                                                    <li><a href="{Permalink}" target="_Blank">{NoteCountWithLabel}</a></li>
-                                                </ul>
-                                            </div>
-                                            {block:ifShowCaptionUnderPost}
-                                                {block:Caption}
-                                                    <div class="caption {select:Caption Style}">
-                                                        {Caption}
-                                                    </div>
-                                                {/block:Caption}
-                                            {/block:ifShowCaptionUnderPost}
-                                        {/block:IndexPage}
-                                    </div>
-                                    
-                                    {block:PermalinkPage}
-                                        <div class="col-md-6 col-xs-12 col-sm-6">
-                                            <div class="captionpp col-md-12 col-sm-12">
-                                                <div class="likereblogpp">
-                                                    <ul>
-                                                        <li><a href="{Permalink}" target="_Blank">{NoteCountWithLabel}</a></li>
-                                                        <li><a href="{ReblogURL}" target="_Blank"><i class="fa fa-share fa-lg"></i></a></li>
-                                                        <li>
-                                                            <div class="custom-like-button">
-                                                                {LikeButton}
-                                                                <span class="out_toggle">
-                                                                    <i class="fa fa-heart fa-lg"></i>
-                                                                </span>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="captionpp commentpp col-md-12 col-sm-12">
-                                                {Caption}
-                                            </div>
-                                            <div class="captionpp notespp col-md-12 col-sm-12">
-                                                <div class="insidenotes">
-                                                    {block:PostNotes}
-                                                        {PostNotes-64}
-                                                    {/block:PostNotes}
-                                                </div>
-                                            </div>
-                                        </div>
-                                    {/block:PermalinkPage}
-                                </div>
-                            {/block:Photoset}
-                            
-                            {block:Text}
-                                <div class="grid-item {block:IndexPage}{block:ifNotTextFullWidth}{select:Layout Type}{/block:ifNotTextFullWidth} {block:ifTextFullWidth}col-md-12 col-xs-12 col-sm-12{/block:ifTextFullWidth}{/block:IndexPage}{block:PermalinkPage}col-md-12{/block:PermalinkPage}">
-                                    <div class="bgborder {block:PermalinkPage}jfpp {select:Text Post Style On Permalink Page}{/block:PermalinkPage}">
-                                        <div class="inside-item{block:PermalinkPage}pp{/block:PermalinkPage} {select:Text Post Style}">
-                                            {block:Title}
-                                                <h3>{block:IndexPage}<a href="{Permalink}">{/block:IndexPage}{Title}{block:IndexPage}</a>{/block:IndexPage}</h3>
-                                            {/block:Title}
-                                                {Body}
-                                        </div>
-                                        {block:IndexPage}
-                                            <div class="likereblog {select:Like Reblog Style}">
-                                                <ul>
-                                                    <li>
-                                                        <div class="custom-like-button">
-                                                            {LikeButton}
-                                                            <span class="out_toggle">
-                                                                <i class="fa fa-heart fa-lg"></i>
-                                                            </span>
-                                                        </div>
-                                                    </li>
-                                                    <li><a href="{ReblogURL}" target="_Blank"><i class="fa fa-share fa-lg"></i></a></li>
-                                                    <li><a href="{Permalink}" target="_Blank">{NoteCountWithLabel}</a></li>
-                                                </ul>
-                                            </div>
-                                            {block:ifShowCaptionUnderPost}
-                                                {block:Caption}
-                                                    <div class="caption {select:Caption Style}">
-                                                        {Caption}
-                                                    </div>
-                                                {/block:Caption}
-                                            {/block:ifShowCaptionUnderPost}
-                                        {/block:IndexPage}
-                                    </div>
-                                    {block:PermalinkPage}
-                                        <div class="{select:Text Post Style On Permalink Page}">
-                                            <div class="captionpp col-md-12 col-sm-12">
-                                                <div class="likereblogpp">
-                                                    <ul>
-                                                        <li><a href="{Permalink}" target="_Blank">{NoteCountWithLabel}</a></li>
-                                                        <li><a href="{ReblogURL}" target="_Blank"><i class="fa fa-share fa-lg"></i></a></li>
-                                                        <li>
-                                                            <div class="custom-like-button">
-                                                                {LikeButton}
-                                                                <span class="out_toggle">
-                                                                    <i class="fa fa-heart fa-lg"></i>
-                                                                </span>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="captionpp commentpp col-md-12 col-sm-12">
-                                                {Caption}
-                                            </div>
-                                            <div class="captionpp notespp col-md-12 col-sm-12">
-                                                <div class="insidenotes">
-                                                    {block:PostNotes}
-                                                        {PostNotes-64}
-                                                    {/block:PostNotes}
-                                                </div>
-                                            </div>
-                                        </div>
-                                    {/block:PermalinkPage}
-                                </div>
-                            {/block:Text}
-                            
-                            {block:Quote}
-                                <div class="grid-item {block:IndexPage}{block:ifNotTextFullWidth}{select:Layout Type}{/block:ifNotTextFullWidth} {block:ifTextFullWidth}col-md-12 col-xs-12 col-sm-12{/block:ifTextFullWidth}{/block:IndexPage}{block:PermalinkPage}col-md-12{/block:PermalinkPage}">
-                                    <div class="bgborder {block:PermalinkPage}jfpp {select:Text Post Style On Permalink Page}{/block:PermalinkPage}">
-                                        <div class="inside-item{block:PermalinkPage}pp{/block:PermalinkPage} {select:Text Post Style}">
-                                            <h2>"{Quote}"</h2>
-                                            {block:Source}
-                                                <div class="source">
-                                                    —{block:IndexPage}<a href="{Permalink}" target="_Blank">{/block:IndexPage}{Source}{block:IndexPage}</a>{/block:IndexPage}
-                                                </div>
-                                            {/block:Source}
-                                        </div>
-                                        {block:IndexPage}
-                                            <div class="likereblog {select:Like Reblog Style}">
-                                                <ul>
-                                                    <li>
-                                                        <div class="custom-like-button">
-                                                            {LikeButton}
-                                                            <span class="out_toggle">
-                                                                <i class="fa fa-heart fa-lg"></i>
-                                                            </span>
-                                                        </div>
-                                                    </li>
-                                                    <li><a href="{ReblogURL}" target="_Blank"><i class="fa fa-share fa-lg"></i></a></li>
-                                                    <li><a href="{Permalink}" target="_Blank">{NoteCountWithLabel}</a></li>
-                                                </ul>
-                                            </div>
-                                            {block:ifShowCaptionUnderPost}
-                                                {block:Caption}
-                                                    <div class="caption {select:Caption Style}">
-                                                        {Caption}
-                                                    </div>
-                                                {/block:Caption}
-                                            {/block:ifShowCaptionUnderPost}
-                                        {/block:IndexPage}
-                                    </div>
-                                    
-                                    {block:PermalinkPage}
-                                        <div class="{select:Text Post Style On Permalink Page}">
-                                            <div class="captionpp col-md-12 col-sm-12">
-                                                <div class="likereblogpp">
-                                                    <ul>
-                                                        <li><a href="{Permalink}" target="_Blank">{NoteCountWithLabel}</a></li>
-                                                        <li><a href="{ReblogURL}" target="_Blank"><i class="fa fa-share fa-lg"></i></a></li>
-                                                        <li>
-                                                            <div class="custom-like-button">
-                                                                {LikeButton}
-                                                                <span class="out_toggle">
-                                                                    <i class="fa fa-heart fa-lg"></i>
-                                                                </span>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="captionpp commentpp col-md-12 col-sm-12">
-                                                {Caption}
-                                            </div>
-                                            <div class="captionpp notespp col-md-12 col-sm-12">
-                                                <div class="insidenotes">
-                                                    {block:PostNotes}
-                                                        {PostNotes-64}
-                                                    {/block:PostNotes}
-                                                </div>
-                                            </div>
-                                        </div>
-                                    {/block:PermalinkPage}
-                                </div>
-                            {/block:Quote}
-                            
-                            {block:Link}
-                                <div class="grid-item {block:IndexPage}{select:Layout Type}{/block:IndexPage}{block:PermalinkPage}col-md-12{/block:PermalinkPage}">
-                                    <div class="bgborder {block:PermalinkPage}jfpp col-md-6 col-xs-12 col-sm-6{/block:PermalinkPage}">
-                                        <div class="inside-item{block:PermalinkPage}pp{/block:PermalinkPage} linkpost">
-                                                <div class="barlink">
-                                                    <ul>
-                                                        <li>
-                                                            {block:Thumbnail}
-                                                                <img src="{Thumbnail}" alt="{Name}">
-                                                            {/block:Thumbnail}
-                                                        </li>
-                                                        <li class="{select:Link Post List Text Style}"><h1><a href="{URL}" class="link" {Target}>{Name}</a></h1></li>
-                                                        <li class="{select:Link Post List Text Style}">
-                                                            {block:Excerpt}
-                                                                {Excerpt}
-                                                            {/block:Excerpt}
-                                                        </li>
-                                                        <li class="{select:Link Post List Text Style}">
-                                                            {block:Host}
-                                                                {Host}
-                                                            {/block:Host}
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                {block:Description}
-                                                    <div class="descriptionlink">{Description}</div>
-                                                {/block:Description}
-                                        </div>
-                                        {block:IndexPage}
-                                            <div class="likereblog {select:Like Reblog Style}">
-                                                <ul>
-                                                    <li>
-                                                        <div class="custom-like-button">
-                                                            {LikeButton}
-                                                            <span class="out_toggle">
-                                                                <i class="fa fa-heart fa-lg"></i>
-                                                            </span>
-                                                        </div>
-                                                    </li>
-                                                    <li><a href="{ReblogURL}" target="_Blank"><i class="fa fa-share fa-lg"></i></a></li>
-                                                    <li><a href="{Permalink}" target="_Blank">{NoteCountWithLabel}</a></li>
-                                                </ul>
-                                            </div>
-                                            {block:ifShowCaptionUnderPost}
-                                                {block:Caption}
-                                                    <div class="caption {select:Caption Style}">
-                                                        {Caption}
-                                                    </div>
-                                                {/block:Caption}
-                                            {/block:ifShowCaptionUnderPost}
-                                        {/block:IndexPage}
-                                    </div>
-                                    {block:PermalinkPage}
-                                        <div class="col-md-6 col-xs-12 col-sm-6">
-                                            <div class="captionpp col-md-12 col-sm-12">
-                                                <div class="likereblogpp">
-                                                    <ul>
-                                                        <li><a href="{Permalink}" target="_Blank">{NoteCountWithLabel}</a></li>
-                                                        <li><a href="{ReblogURL}" target="_Blank"><i class="fa fa-share fa-lg"></i></a></li>
-                                                        <li>
-                                                            <div class="custom-like-button">
-                                                                {LikeButton}
-                                                                <span class="out_toggle">
-                                                                    <i class="fa fa-heart fa-lg"></i>
-                                                                </span>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="captionpp commentpp col-md-12 col-sm-12">
-                                                {Caption}
-                                            </div>
-                                            <div class="captionpp notespp col-md-12 col-sm-12">
-                                                <div class="col-md-12 col-sm-12 cinsidenotes">
-                                                    <div class="insidenotes col-md-12 col-sm-12">
-                                                            {block:PostNotes}
-                                                                {PostNotes-64}
-                                                            {/block:PostNotes}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    {/block:PermalinkPage}
-                                </div>
-                            {/block:Link}
-                            
-                        {/block:Posts}
-                    </div>
+                <div class="footercontainer">
+                    {block:IndexPage}
+                        {block:Pagination}
+                            <ul>
+                                {block:PreviousPage}
+                                    <li><a href="{PreviousPage}"><i class="fa fa-backward"></i></a>
+                                {/block:PreviousPage}    
+                                    <li>{CurrentPage}{block:ifShowTotalPages}/{TotalPages}{/block:ifShowTotalPages}
+                                {block:NextPage}
+                                    <li><a href="{NextPage}"><i class="fa fa-forward"></i></a></li>
+                                {/block:NextPage}
+                            </ul>
+                        {/block:Pagination}
+                    {/block:IndexPage}
+                </div>
+                <div class="themeby">
+                    <p>theme by <a href="https://twitter.com/M_Antiheroe" target="_Blank">M_Antiheroe</a></p>
                 </div>
             </div>
         </div>
-        
-        
-        <footer>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="footercontainer">
-                        {block:IndexPage}
-                            {block:Pagination}
-                                <ul>
-                                    {block:PreviousPage}
-                                        <li><a href="{PreviousPage}"><i class="fa fa-backward"></i></a>
-                                    {/block:PreviousPage}    
-                                        <li>{CurrentPage}{block:ifShowTotalPages}/{TotalPages}{/block:ifShowTotalPages}
-                                    {block:NextPage}
-                                        <li><a href="{NextPage}"><i class="fa fa-forward"></i></a></li>
-                                    {/block:NextPage}
-                                </ul>
-                            {/block:Pagination}
-                        {/block:IndexPage}
-                    </div>
-                    <div class="themeby">
-                        <p>theme by <a href="https://twitter.com/M_Antiheroe" target="_Blank">M_Antiheroe</a></p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-            
-
-<!-- WRITE MORE HTML STUFF BEFORE THIS PART -->
-<!-- SCRIPTS AT THE END OF THE BODY -->
-        <script>
-            if($.trim($(".commentpp").text()) == "") {
-                $(".commentpp").remove();
-            };
-            
-            if($.trim($(".notespp").text()) == "") {
-                $(".notespp").remove();
-            };
-            
-            $(document).ready(function() {
-                var $grid = $('.grid').masonry({
-                itemSelector: '.grid-item',
-            });
-
-            $('.grid').imagesLoaded().progress(function() {
-                $grid.masonry();
+    </footer>
+                
+    
+    <!-- WRITE MORE HTML STUFF BEFORE THIS PART -->
+    <!-- SCRIPTS AT THE END OF THE BODY -->
+            <script>
+                
+                if($.trim($(".commentpp").text()) == "") {
+                    $(".commentpp").remove();
+                };
+                
+                if($.trim($(".notespp").text()) == "") {
+                    $(".notespp").remove();
+                };
+                
+                $(function() {
+                    var $grid = $('.grid').masonry({
+                    columnWidth: '.colwidthfix',
+                    itemSelector: '.grid-item',
                 });
-            });
-            
-            $('.photoset-grid').photosetGrid({
-                onComplete: function(){
-                    $('.photoset-grid').css({
-                        'visiblity': 'visible'
-                        });
-                    }
-            });
-        </script>
-    </body>
-</html>
+    
+                $('.grid').imagesLoaded().progress(function() {
+                    $grid.masonry();
+                    });
+                });
+                
+                $('.photoset-grid').photosetGrid({
+                    onComplete: function(){
+                        $('.photoset-grid').css({
+                            'visiblity': 'visible'
+                            });
+                        }
+                });
+            </script>
+        </body>
+    </html>
